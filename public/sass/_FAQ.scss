@@ -1,0 +1,38 @@
+#FAQ-section{
+	.item{
+		&-content{
+			p{
+				color: #747474;
+				font-size: 15px;
+				font-family: 'Lato-Regular';
+			}
+			a{
+				font-family: 'Lato-Regular';				
+				font-size: 15px;
+				text-decoration: underline;
+				color: #007bff;
+			}
+		}
+		&-trigger{
+			.item-info{
+				h2{
+					font-family: 'Lato-Bold';
+					text-align: left;
+					color: black;
+				}
+				&-collapsed{
+					h2{
+						font-family: 'Lato-Bold';
+						text-align: left;
+						color: black;
+					}
+				}
+			}
+		}
+	}
+	.items-title{
+		font-family: 'Lato-Bold';
+		font-size: 2.5rem;
+		color: black !important;
+	}
+}

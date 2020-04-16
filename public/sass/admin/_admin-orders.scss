@@ -1,0 +1,12 @@
+#admin-orders{
+	.item{
+		&-trigger{
+			.btn-link{
+				color: black;
+				&:hover{
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

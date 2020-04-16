@@ -1,0 +1,15 @@
+#adminDBUsers {
+	.usersButtons{
+		.btn{
+			min-width: 0px;
+			padding: 0px;
+			text-align: center;
+		}
+		@include media-breakpoint-down(md){
+			margin-top: 20px !important;
+			.btn{
+				margin-left: 20px;
+			}
+		}
+	}
+}

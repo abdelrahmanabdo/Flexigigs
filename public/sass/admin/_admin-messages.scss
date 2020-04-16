@@ -1,0 +1,29 @@
+.msgbox{
+	.item-trigger{
+		// position: relative;
+		.fa-trash {
+			font-size: 14px;
+			color: #666;
+			position: absolute;
+			bottom: 15px;
+			right: 10px;
+			cursor: pointer;
+			&:hover,
+			&:active,
+			&:focus {
+				color: #666;
+			}
+			@include media-breakpoint-down(md) {
+				bottom: 30px;
+			}
+		}
+		.message-head{
+			&-info{
+				font-size: 1.25rem;
+				color: black !important;
+				font-family: 'Lato-Regular' !important;
+				text-align: left;
+			}
+		}
+	}
+}

@@ -1,0 +1,56 @@
+/* menu btn */
+$tcon-size: 42.75px !default;
+$tcon-transition: 0.3s !default;
+$tcon-jstransform: "tcon-transform" !default;
+
+$tcon-menu-radius: none !default;
+$tcon-menu-color: #fff !default;
+$tcon-menu-arrowleft-transformation: (
+	transform: scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 90deg)
+) !default;
+$tcon-menu-arrow360left-transformation: (
+	transform: scale3d(0.8, 0.8, 0.8) rotate3d(0, 0, 1, 360deg)
+) !default;
+
+//typo
+$body-font: "Lato-Light";
+$title-font: "Lato-Bold";
+$nav-font: "Lato-Regular";
+$italic-font: "Lato-Italic";
+$cairo-regular: "Cairo-Regular";
+$cairo-bold: "Cairo-Bold";
+$cairo-light: "Cairo-Light";
+$cairo-black: "Cairo-Black";
+
+//Mixinis
+@import "../node_modules/bootstrap/scss/mixins/_breakpoints.scss";
+
+/* menu btn */
+@mixin tcon-menu-lines {
+	display: inline-block;
+	height: ($tcon-size / 9.5);
+	width: $tcon-size;
+	border-radius: $tcon-menu-radius;
+	transition: $tcon-transition;
+	background: $tcon-menu-color;
+}
+
+//font-face mixin
+@mixin font-face(
+	$font-family,
+	$file-path,
+	$font-weight: normal,
+	$font-style: normal
+) {
+	@font-face {
+		font-family: $font-family;
+		src: url("#{$file-path}.eot");
+		src: url("#{$file-path}.eot?#iefix") format("embedded-opentype"),
+			url("#{$file-path}.woff2") format("woff2"),
+			url("#{$file-path}.woff") format("woff"),
+			url("#{$file-path}.ttf") format("truetype"),
+			url("#{$file-path}.svg##{$font-family}") format("svg");
+		font-weight: $font-weight;
+		font-style: $font-style;
+	}
+}

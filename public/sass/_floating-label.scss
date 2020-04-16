@@ -1,0 +1,127 @@
+.has-float-label {
+	display: block;
+	position: relative
+}
+
+.has-float-label label,
+.has-float-label>span {
+	position: absolute;
+	cursor: text;
+	font-size: 100%;
+	opacity: 1;
+	-webkit-transition: all .2s;
+	transition: all .2s;
+	top: -1em;
+	left: 0rem;
+	color: #000;
+	z-index: 1;
+	line-height: 1;
+	padding: 0 1px;
+	font-family: $nav-font;
+	
+}
+.has-float-label>span{
+	
+	text-transform: capitalize !important;
+	z-index: 1 !important;
+}
+.has-float-label > p{
+	position: absolute;
+	right: 0;
+}
+
+.has-float-label label::after,
+.has-float-label>span::after {
+	content: " ";
+	display: block;
+	position: absolute;
+	background: #fff;
+	height: 2px;
+	top: 50%;
+	left: -.2em;
+	right: -.2em;
+	z-index: -1
+}
+
+.has-float-label .form-control::-webkit-input-placeholder {
+	opacity: 1;
+	-webkit-transition: all .2s;
+	transition: all .2s
+}
+
+.has-float-label .form-control::-moz-placeholder {
+	opacity: 1;
+	transition: all .2s
+}
+
+.has-float-label .form-control:-ms-input-placeholder {
+	opacity: 1;
+	transition: all .2s
+}
+
+.has-float-label .form-control::placeholder {
+	opacity: 1;
+	-webkit-transition: all .2s;
+	transition: all .2s
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-webkit-input-placeholder {
+	opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::-moz-placeholder {
+	opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus):-ms-input-placeholder {
+	opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)::placeholder {
+	opacity: 0
+}
+
+.has-float-label .form-control:placeholder-shown:not(:focus)+* {
+	font-size: 90% !important;
+	opacity: .4 !important;
+	top: 0.8em !important;
+}
+
+.input-group .has-float-label {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	-ms-flex-positive: 1;
+	flex-grow: 1;
+	margin-bottom: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center
+}
+
+.input-group .has-float-label .form-control {
+	width: 100%;
+	border-radius: .25rem
+}
+
+.input-group .has-float-label:not(:last-child),
+.input-group .has-float-label:not(:last-child) .form-control {
+	border-bottom-right-radius: 0;
+	border-top-right-radius: 0;
+	border-right: 0
+}
+
+.input-group .has-float-label:not(:first-child),
+.input-group .has-float-label:not(:first-child) .form-control {
+	border-bottom-left-radius: 0;
+	border-top-left-radius: 0
+}

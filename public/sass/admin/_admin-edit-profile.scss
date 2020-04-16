@@ -1,0 +1,36 @@
+.edit-profile{
+	font-family: $nav-font;
+	box-shadow: 0px 3px 6px 0px rgba(000, 000, 000, 0.3) !important;
+	&-form{
+		input, textarea, select{
+			&::placeholder{
+				// opacity: .5 !important;
+				color: #b4b4b4 !important;
+				font-size: 13px;
+			}
+			&::-moz-placeholder{
+				color: #b4b4b4 !important;
+				font-size: 13px;				
+			}
+		}
+		textarea{
+			font-size: 13px !important;
+		}
+	}
+	&-skills{
+		border-bottom:1px solid #c7c7cc;
+		padding-bottom: 8px;
+		label{
+			color: black;
+			font-size: 13px;
+			margin-top: 2rem;
+			margin-bottom: 0px;
+		}
+		.badge{
+			font-size: 12px;
+			font-weight: lighter;
+			border-radius: 8px;
+			margin-top: 10px;
+		}
+	}
+}

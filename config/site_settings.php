@@ -1,0 +1,20 @@
+<?php 
+return [
+	'commission'=>[
+		'service'=>[
+			'handling'=>'.07',
+			'transaction'=>'.07',
+		],
+		'gig'=>[
+			'handling'=>'.07',
+			'transaction'=>'0',
+		],
+        'bank'=>'.03',
+    ],
+	'social'=>[
+		'facebook'=>'https://www.facebook.com/Flexigigs',
+		'linkedin'=>'https://www.linkedin.com/company/flexigigs',
+		'twitter'=>'https://www.twitter.com/Flexigigs',
+		'instagram'=>'#'
+	]
+];

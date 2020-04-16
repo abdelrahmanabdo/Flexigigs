@@ -1,0 +1,66 @@
+// service request
+          if ($request->segment(2)=="mobile") {
+            $userdata= User::find($customer_id);
+            $gateway = Omnipay::create('Migs_ThreeParty');
+            $gateway->setMerchantId(config('sysconfig.migs.migs_config_egp.merchand_id'));
+            $gateway->setMerchantAccessCode(config('sysconfig.migs.migs_config_egp.access_code'));
+            $gateway->setSecureHash(config('sysconfig.migs.migs_config_egp.hash_secret'));
+            $response = $gateway->purchase(['amount' => $price->total_handling_payment,
+                                            'description'=>$userdata->email,
+                                            'currency' => 'EGP',
+                                            'returnUrl'=>route('mobilerequestReturn',
+                                                              ['request_id'=>$service_request->id,
+                                                               'transaction_token'=>$service_request->transaction_token
+                                                              ]),
+                                            'transactionId'=>$service_request->id
+                                          ])->send();
+            if ($response->isRedirect()) {$response->redirect(); } else { echo $response->getMessage(); }
+          }else{
+            $gateway = Omnipay::create('Migs_ThreeParty');
+            $gateway->setMerchantId(config('sysconfig.migs.migs_config_egp.merchand_id'));
+            $gateway->setMerchantAccessCode(config('sysconfig.migs.migs_config_egp.access_code'));
+            $gateway->setSecureHash(config('sysconfig.migs.migs_config_egp.hash_secret'));
+            $response = $gateway->purchase(['amount' => $price->total_handling_payment,
+                                            'description'=>Auth::user()->email,
+                                            'currency' => 'EGP',
+                                            'returnUrl'=>route('requestReturn',
+                                                              ['request_id'=>$service_request->id,
+                                                               'transaction_token'=>$service_request->transaction_token
+                                                              ]),
+                                            'transactionId'=>$service_request->id
+                                          ])->send();
+            if ($response->isRedirect()) {$response->redirect(); } else { echo $response->getMessage(); }
+          }
+//============================
+//application
+      if ($request->segment(2)=="mobile") {
+        $gateway = Omnipay::create('Migs_ThreeParty');
+        $gateway->setMerchantId(config('sysconfig.migs.migs_config_egp.merchand_id'));
+        $gateway->setMerchantAccessCode(config('sysconfig.migs.migs_config_egp.access_code'));
+        $gateway->setSecureHash(config('sysconfig.migs.migs_config_egp.hash_secret'));
+        $response = $gateway->purchase(['amount' => $price->total_handling_payment,
+                                        'description'=>$application->customer->email,
+                                        'currency' => 'EGP',
+                                        'returnUrl'=>route('mobileapplicationReturn',
+                                                          ['application_id'=>$application->id,
+                                                           'transaction_token'=>$application->transaction_token
+                                                          ]),
+                                        'transactionId'=>$application->id,
+                                      ])->send();
+        if ($response->isRedirect()) {$response->redirect(); } else { echo $response->getMessage(); }
+      }else{
+        $gateway = Omnipay::create('Migs_ThreeParty');
+        $gateway->setMerchantId(config('sysconfig.migs.migs_config_egp.merchand_id'));
+        $gateway->setMerchantAccessCode(config('sysconfig.migs.migs_config_egp.access_code'));
+        $gateway->setSecureHash(config('sysconfig.migs.migs_config_egp.hash_secret'));
+        $response = $gateway->purchase(['amount' => $price->total_handling_payment,
+                                        'description'=>$application->customer->email,
+                                        'currency' => 'EGP',
+                                        'returnUrl'=>route('applicationReturn',
+                                                          ['application_id'=>$application->id,
+                                                           'transaction_token'=>$application->transaction_token
+                                                          ]),
+                                        'transactionId'=>$application->id
+                                      ])->send();
+        if ($response->isRedirect()) {$response->redirect(); } else { echo $response->getMessage(); }
+      }

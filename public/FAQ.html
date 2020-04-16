@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Flexigigs</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- jQuery UI CSS -->
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.structure.min.css">
+	<link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+	<!-- Bootstrap CSS -->
+	<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- Swiper CSS -->
+	<link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+	<!-- Site CSS -->
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+	<!-- Modernizer -->
+	<script src="js/modernizr.custom.js"></script>
+	<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+</head>
+
+<body>
+	<!-- message modal -->
+	<div class="modal fade message-modal" tabindex="-1" role="dialog" aria-labelledby="messageModal" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Send Message</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label class="text-hide">Message</label>
+						<textarea name="reply" class="form-control counted" rows="1" placeholder="Message"></textarea>
+						<span class="char">0/200</span>
+					</div>
+					<div class="form-group">
+						<label class="custom-file">
+							<input type="file" id="file2" class="custom-file-input">
+							<span class="custom-file-control"></span>
+						</label>
+					</div>
+					<button class="btn btn-primary btn-block">send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="site-wrap inner dashboard">
+		<header class="container-fluid">
+			<a href="index.html" class="logo" title="home">
+				<img src="images/logo.png" alt="logo">
+			</a>
+			<div class="search input-group">
+				<input type="text" class="form-control" placeholder="What is your next gig" aria-label="What is your next gig">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="button">Search</button>
+				</span>
+			</div>
+			<div class="top-nav">
+				<button type="button" id="trigger-overlay" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+					<span class="tcon-menu__lines" aria-hidden="true"></span>
+					<span class="tcon-visuallyhidden">toggle menu</span>
+				</button>
+				<!-- <div class="btn-group btn-group-sm" role="group" aria-label="login and register">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registerModal">Register</button>
+            </div> -->
+				<div class="user-welcome">
+					<img src="images/man.png" alt="user image">
+					<p>Welcome, Customer Name</p>
+				</div>
+				<div class="social">
+					<a href="#" title="facebook">
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" title="linkedin">
+						<i class="icon-linkedin"></i>
+					</a>
+					<a href="#" title="twitter">
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" title="instgram">
+						<i class="icon-instagram"></i>
+					</a>
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="#">AR</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay overlay-slidedown">
+				<div class="container-fluid">
+					<button type="button" id="close-overlay" class="tcon tcon-menu--xcross tcon-transform close-overlay-btn" aria-label="toggle menu">
+						<span class="tcon-menu__lines" aria-hidden="true"></span>
+						<span class="tcon-visuallyhidden">toggle menu</span>
+					</button>
+				</div>
+				<nav aria-labelledby="main navigation">
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li>
+							<a href="#">Categories</a>
+						</li>
+						<li>
+							<a href="#">My Dashboard</a>
+						</li>
+						<li>
+							<a href="#">Help</a>
+						</li>
+						<li>
+							<a href="#" class="close-overlay-btn">Logout</a>
+						</li>
+						<li>
+							<div class="social">
+								<a href="#" title="facebook">
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" title="linkedin">
+									<i class="icon-linkedin"></i>
+								</a>
+								<a href="#" title="twitter">
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" title="instgram">
+									<i class="icon-instagram"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+		<!-- /header -->
+		<div class="page-header">
+			<nav aria-label="breadcrumb" role="navigation">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="breadcrumb-item active" aria-current="page">FAQ</li>
+				</ol>
+			</nav>
+		</div>
+		<section class="container" id="FAQ-section">
+			<div class="row">
+				<div class="col-12">
+					<div id="FAQList" data-children=".item">
+						
+						<h1 class="items-title text-capitalize mt-5 mb-4">Employer FAQs:</h1>
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-1" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs work?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs work?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-1" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Basically, Flexigigs is a platform designed for employers and freelance, part-time and intern service providers to meet.
+										Employers register in order to be able to search FlexiGigs’ extensive database for the perfect candidate to perform a job
+										for them.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-2" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How do I hire on flexigigs?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How do I hire on flexigigs?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-2" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">It’s pretty simple. You, as a HeadHunter, can hire a service provider, a GigHunter, through one of the following methods:</p>
+										<ol type="A">
+											<li><p class="lead"><b class="font-weight-bold">Direct order: </b> search the database and lock an order with your chosen service provider.</p></li>
+											<li><p class="lead"><b class="font-weight-bold">Post a Gig:</b>  publish an advertisement for service providers to apply for. You can then shortlist the applications and confirm the order
+											with your chosen service provider. </p></li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-3" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How do I pay my service provider and what does it cost?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How do I pay my service provider and what does it cost?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-3" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">This is the best part. Paying a service provider is processed through FlexiGigs. Once an order has been placed with a service
+										provider, will make the payment in advance and in full. Money is then held in FlexiGigs’ super secure “cash vault” until
+										the job is successfully done.</p>
+										<p class="lead">FlexiGigs offers you different payment methods for more convenience. You can either pay online using your credit cards, or
+										through any “Fawry” outlet. No trips to the bank or awkward envelope slipping necessary. You will just be charged a premium
+										of 10% over and above service cost in handling fees.</p>
+										<a href="#">
+											 To avoid any scams or fraud, you have to notify FlexiGigs immediately if your service provider solicits payment from you
+											outside the platform.
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-4" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>Is my personal information safe?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>Is my personal information safe?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-4" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Relax, Flexigigs guarantees that any personal information provided will be handled securely.</p>
+										<p class="lead">Please refer to our “Privacy Policy” for more details.</p>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-5" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>What is FlexiGigs' "Cash Vault"?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>What is FlexiGigs' "Cash Vault"?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-5" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">The Cash Vault feature enables you to transfer certain payment responsibilities to FlexiGigs. This is where the money you’ve
+										paid in advance is held- nice and cozy- to be released when your service provider has completed the service successfully.</p>
+						
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-6" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>What if I have a disagreement with my service provider?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>What if I have a disagreement with my service provider?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-6" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Sad but true; in certain cases a dispute may occur between you and your chosen service provider. Flexigigs can assume the
+										role of impartial mediator in order to resolve the issue for a reasonable fee.</p>
+										<p class="lead">Please refer to our “Refund Policy” for more details.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-7" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>Why shouldn’t I pay my freelancer directly/offline?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>Why shouldn’t I pay my freelancer directly/offline?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-7" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Well, to protect your rights of course! FlexiGigs is designed to uphold and reserve the rights of both employers and service
+										providers. To avoid scams or any type of fraud, Flexigigs will keep the money- safe and sound- on behalf of both parties,
+										until the job is successfully performed.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-8" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs protect my rights as an employer?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs protect my rights as an employer?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-8" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">To ensure that you get exactly what you pay for, FlexiGigs agrees not to pay service providers for services until after you
+										have accepted the completed service to your satisfaction.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-9" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs calculate its fees? </h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs calculate its fees? </h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-9" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Great news! Registration and posting jobs are completely free. The only fee you are responsible for is a 10% handling fee
+										when you pay an invoice.</p>
+										<p class="lead">In case of a “Dispute Case”, Dispute Resolution Service Fee is equal to EGP 25 or 5% (whichever is greater) of the total
+										amount you’ve paid to FlexiGigs for the project in question.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<h1 class="items-title text-capitalize mt-5 mb-4">flreelancer FAQs:</h1>
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-10" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs work?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs work?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-10" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Basically, Flexigigs is a platform designed for employers and freelance, part-time and intern service providers to meet.
+											Service providers should register in order to be featured in our comprehensive database. Employers then search through
+											it for the perfect candidate (hopefully you!) to perform a job for them.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-11" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>What projects can I find on Flexigigs?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>What projects can I find on Flexigigs?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-11" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Practically any freelance job you can think of can be found on FlexiGigs. With its wide range of categories and subcategories,
+											our database is designed to cover all kinds of freelance jobs; some of which can be completed remotely, while others
+											are usually performed offline.</p>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-12" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How do I get hired by clients?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How do I get hired by clients?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-12" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">It’s simple. After uploading your portfolio, you, as a GigHunter, can get hired by an employer, a HeadHunter, through
+											one of the following methods:</p>
+										<ol type="A">
+											<li>
+												<p>
+													<b>Direct order:</b> when an employer directly locks an order with you as a preferred service provider.</p>
+											</li>
+											<li>
+												<p>
+													<b>Search gigs:</b> when you search the database of published advertisements and apply for the one which fits your profile
+													best. Your application will be sent to the employer, after which he will shortlist the applications and confirm the
+													order with the chosen service provider (hopefully you!).</p>
+											</li>
+										</ol>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-13" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>Is my personal information safe?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>Is my personal information safe?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-13" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Relax, Flexigigs guarantees that any personal information provided will be handled securely.</p>
+										<p class="lead">Please refer to our “Privacy Policy” for more details.</p>
+						
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-14" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs calculate its fees?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs calculate its fees?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-14" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">
+											Great news! Registration and applying for jobs are completely free. You are only charged 10% out of the total project fee
+											as a transaction fee. This amount will be deducted from your earnings. If you choose to be paid through bank transfer,
+											then an additional 2% will be deducted as a bank transfer fee.
+										</p>
+										<p class="lead">
+											In case of a “Dispute Case”, Dispute Resolution Service Fee is equal to EGP 25 or 5% (whichever is greater) of the total
+											amount the employer has paid to FlexiGigs for the project in question.
+										</p>
+						
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-15" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>How does Flexigigs protect my rights as a freelancer?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>How does Flexigigs protect my rights as a freelancer?</h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-15" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">This is one of our best features. Once an employer has confirmed a service request with you, advanced payment for your
+											service will be paid and held in FlexiGigs’ super secure “cash vault”. FlexiGigs will accordingly assume responsibility
+											for the payment, directly releasing it to you as soon as the employer verifies that the service has been successfully
+											completed. No more late payments and lost invoices!</p>
+										<p class="lead">For more details, please refer to clause II “Safe Deposit Service” under section 6 “FlexiGigs BILLING AND PAYMENT SERVICES”
+											of Terms and Conditions.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<div class="item">
+							<div class="item-trigger collapsed" data-toggle="collapse" data-parent="#FAQList" data-target="#FAQ-16" aria-expanded="true">
+								<div class="item-info-collapsed">
+									<h2>Why shouldn’t I get paid by my client directly/offline? </h2>
+									<i class="icon-angle-down"></i>
+								</div>
+								<div class="item-info">
+									<h2>Why shouldn’t I get paid by my client directly/offline? </h2>
+									<i class="icon-angle-down"></i>
+								</div>
+							</div>
+							<div id="FAQ-16" class="item-content collapse" role="tabpanel">
+								<div class="row">
+									<div class="col-lg-12 mt-3">
+										<p class="lead">Well, to protect your rights of course! FlexiGigs is designed to uphold and reserve the rights of both employers and
+											service providers. To avoid scams or any type of fraud, Flexigigs will keep the money- safe and sound- on behalf of
+											both parties, until the job is successfully performed.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<a href="#">Writers-Editorial</a>
+						<ul>
+							<li>
+								<a href="" title="">Proofreading and Editing</a>
+							</li>
+							<li>
+								<a href="" title="">Artical Writing</a>
+							</li>
+							<li>
+								<a href="" title="">CV Writing</a>
+							</li>
+							<li>
+								<a href="" title="">Cover letter Writing</a>
+							</li>
+							<li>
+								<a href="" title="">CV Writing</a>
+							</li>
+							<li>
+								<a href="" title="">Research Writing</a>
+							</li>
+							<li>
+								<a href="" title="">Script Writing</a>
+							</li>
+							<li>
+								<a href="" title="">User Guides and Manuals</a>
+							</li>
+							<li>
+								<a href="" title="">Reports</a>
+							</li>
+							<li>
+								<a href="" title="">Blog Writing</a>
+							</li>
+							<li>
+								<a href="" title="">Academic Writing</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">IT</a>
+						<ul>
+							<li>
+								<a href="" title="">Web designer</a>
+							</li>
+							<li>
+								<a href="" title="">Web developer</a>
+							</li>
+							<li>
+								<a href="" title="">Software designer</a>
+							</li>
+							<li>
+								<a href="" title="">Programing</a>
+							</li>
+							<li>
+								<a href="" title="">Mobile application developer</a>
+							</li>
+							<li>
+								<a href="" title="">Games Developer</a>
+							</li>
+							<li>
+								<a href="" title="">Technician</a>
+							</li>
+							<li>
+								<a href="" title="">Javascript</a>
+							</li>
+							<li>
+								<a href="" title="">Adobe InDesign</a>
+							</li>
+						</ul>
+						<a href="#">Legal</a>
+						<ul>
+							<li>
+								<a href="" title="">Contract writing</a>
+							</li>
+							<li>
+								<a href="" title="">Contract review</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">Social Media</a>
+						<ul>
+							<li>
+								<a href="" title="">Social Media Account Manager</a>
+							</li>
+							<li>
+								<a href="" title="">Digital Marketing Expert</a>
+							</li>
+							<li>
+								<a href="" title="">SEO</a>
+							</li>
+							<li>
+								<a href="" title="">SEM</a>
+							</li>
+							<li>
+								<a href="" title="">Web Content</a>
+							</li>
+						</ul>
+						<a href="#">Design</a>
+						<ul>
+							<li>
+								<a href="" title="">Logo</a>
+							</li>
+							<li>
+								<a href="" title="">Business Cards</a>
+							</li>
+							<li>
+								<a href="" title="">Adverts</a>
+							</li>
+							<li>
+								<a href="" title="">Graphic Design</a>
+							</li>
+							<li>
+								<a href="" title="">Infographics</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">Architects</a>
+						<ul>
+							<li>
+								<a href="" title="">Architects Design</a>
+							</li>
+							<li>
+								<a href="" title="">Interior Design</a>
+							</li>
+							<li>
+								<a href="" title="">3D Modeling</a>
+							</li>
+						</ul>
+						<a href="#">Art</a>
+						<ul>
+							<li>
+								<a href="" title="">Photography</a>
+							</li>
+							<li>
+								<a href="" title="">Videography</a>
+							</li>
+							<li>
+								<a href="" title="">Photo Editing</a>
+							</li>
+							<li>
+								<a href="" title="">Creative Art</a>
+							</li>
+							<li>
+								<a href="" title="">Animator</a>
+							</li>
+							<li>
+								<a href="" title="">Caricaturist</a>
+							</li>
+							<li>
+								<a href="" title="">Wall painting art</a>
+							</li>
+							<li>
+								<a href="" title="">Art and Canvas</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">Consultancy Services</a>
+						<ul>
+							<li>
+								<a href="" title="">Financial Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">Legal Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">Public Relations Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">Human Resources Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">Social Media Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">IT Consultancy</a>
+							</li>
+							<li>
+								<a href="" title="">Market Research</a>
+							</li>
+							<li>
+								<a href="" title="">Feasibility Study</a>
+							</li>
+							<li>
+								<a href="" title="">Audit Services</a>
+							</li>
+						</ul>
+						<a href="#">Sports</a>
+						<ul>
+							<li>
+								<a href="" title="">Personal Trainer</a>
+							</li>
+							<li>
+								<a href="" title="">Swimming instructors</a>
+							</li>
+							<li>
+								<a href="" title="">Yoga</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">Translation</a>
+						<ul>
+							<li>
+								<a href="" title="">English</a>
+							</li>
+							<li>
+								<a href="" title="">French</a>
+							</li>
+							<li>
+								<a href="" title="">German</a>
+							</li>
+							<li>
+								<a href="" title="">Spanish</a>
+							</li>
+							<li>
+								<a href="" title="">Italian</a>
+							</li>
+						</ul>
+						<a href="#">Tutoring</a>
+						<ul>
+							<li>
+								<a href="" title="">English</a>
+							</li>
+							<li>
+								<a href="" title="">French</a>
+							</li>
+							<li>
+								<a href="" title="">German</a>
+							</li>
+							<li>
+								<a href="" title="">Spanish</a>
+							</li>
+							<li>
+								<a href="" title="">Italian</a>
+							</li>
+							<li>
+								<a href="" title="">IELTS</a>
+							</li>
+							<li>
+								<a href="" title="">SAT</a>
+							</li>
+							<li>
+								<a href="" title="">Toefl</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div>
+						<p>© 2017- FelxiGigs. All rights reserved. Designed & Developed by Road9 Media</p>
+						<a href="#" title="">View Terms & Conditions</a>
+						<a href="#" title="">View Privacy policy</a>
+					</div>
+					<div>
+						<img src="images/mastercard.png" alt="">
+						<img src="images/bank.png" alt="">
+						<img src="images/visa.png" alt="">
+						<img src="images/app-store.png" alt="">
+						<img src="images/play-store.png" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/swiper.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/chosen.jquery.min.js"></script>
+	<script src="js/jquery.barrating.min.js"></script>
+	<script src="js/classie.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

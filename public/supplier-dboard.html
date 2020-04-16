@@ -1,0 +1,1232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Flexigigs</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- jQuery UI CSS -->
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.structure.min.css">
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.min.css">
+    <!-- Bootstrap CSS -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Swiper CSS -->
+    <link type="text/css" rel="stylesheet" href="css/swiper.min.css">
+    <!-- Site CSS -->
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <!-- Modernizer -->
+    <script src="js/modernizr.custom.js"></script>
+    <!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+</head>
+
+<body>
+    <div class="modal fade message-modal" tabindex="-1" role="dialog" aria-labelledby="messageModal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Send Message</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label class="text-hide">Message</label>
+                        <textarea name="reply" class="form-control counted" rows="1" placeholder="Message"></textarea>
+                        <span class="char">0/200</span>
+                    </div>
+                    <div class="form-group">
+                        <label class="custom-file">
+                            <input type="file" id="file2" class="custom-file-input">
+                            <span class="custom-file-control"></span>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary btn-block">send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- add service modal -->
+    <div class="modal fade add-service" tabindex="-1" role="dialog" aria-labelledby="messageModal" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Add Service</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label class="text-hide">Service Name</label>
+                                    <input type="text" name="sName" class="form-control counted" placeholder="Service Name">
+                                    <span class="char">0/35</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-hide">Category</label>
+                                    <select class="form-control" name="category">
+                                        <option value="" disabled selected>Select Category</option>
+                                        <option value="design">Design</option>
+                                        <option value="sport">Sport</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-hide">Sub Category</label>
+                                    <select class="form-control" name="subcategory">
+                                        <option value="" disabled selected>Select Sub Category</option>
+                                        <option value="design">Logo Design</option>
+                                        <option value="sport">Web Design</option>
+                                    </select>
+                                    <small>If can’t find category, <a href="#">please contact us</a></small>
+                                </div>
+                                <div class="form-group d-flex justify-content-between">
+                                    <label class="text-hide">add price</label>
+                                    <input name="price" class="form-control" placeholder="Add Price" type="number">
+                                    <select class="form-control" name="subcategory">
+                                        <option value="per-unit">Per Unit</option>
+                                        <option value="per-project">Per Project</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-hide">Days</label>
+                                    <input type="text" name="days" class="form-control" placeholder="Days to deliver">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-hide">Description</label>
+                                    <textarea name="desc" class="form-control counted" placeholder="Description" rows="1"></textarea>
+                                    <span class="char">0/200</span>
+                                </div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="form-group">
+                                    <label class="text-hide">Terms</label>
+                                    <textarea name="terms" class="form-control counted" placeholder="Terms & Conditions" rows="1"></textarea>
+                                    <span class="char">0/200</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>Requirements Gathering Questions</label>
+                                    <input name="questions" class="form-control" placeholder="Requirements Gathering Questions" type="text">
+                                    <small><a href="#" title="">Add Question</a></small>
+                                </div>
+                                <div class="form-group">
+                                    <label>Portfolio</label>
+                                    <label class="custom-file">
+                                        <input type="file" id="file2" class="custom-file-input">
+                                        <span class="custom-file-control"></span>
+                                    </label>
+                                    <input name="videos" class="form-control" placeholder="Video URL" type="text">
+                                    <small><a href="#" title="">Add Video URL</a></small>
+                                </div>
+                                <div class="d-flex justify-content-end">
+                                    <button class="btn btn-default">cancel</button>
+                                    <button class="btn btn-primary">save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-wrap inner dashboard">
+        <header class="container-fluid">
+            <a href="index.html" class="logo" title="home"><img src="images/logo.png" alt="logo"></a>
+            <div class="search input-group">
+                <input type="text" class="form-control" placeholder="What is your next gig" aria-label="What is your next gig">
+                <span class="input-group-btn">
+              <button class="btn btn-primary" type="button">Search</button>
+            </span>
+            </div>
+            <div class="top-nav">
+                <button type="button" id="trigger-overlay" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+                    <span class="tcon-menu__lines" aria-hidden="true"></span>
+                    <span class="tcon-visuallyhidden">toggle menu</span>
+                </button>
+                <!-- <div class="btn-group btn-group-sm" role="group" aria-label="login and register">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registerModal">Register</button>
+            </div> -->
+                <div class="user-welcome">
+                    <img src="images/man.png" alt="user image">
+                    <p>Welcome, Customer Name</p>
+                </div>
+                <div class="social">
+                    <a href="#" title="facebook"><i class="icon-facebook"></i></a>
+                    <a href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+                    <a href="#" title="twitter"><i class="icon-twitter"></i></a>
+                    <a href="#" title="instgram"><i class="icon-instagram"></i></a>
+                    <div class="dropdown">
+                        <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">EN</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a class="dropdown-item" href="#">AR</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay overlay-slidedown">
+                <div class="container-fluid">
+                    <button type="button" id="close-overlay" class="tcon tcon-menu--xcross tcon-transform close-overlay-btn" aria-label="toggle menu">
+                        <span class="tcon-menu__lines" aria-hidden="true"></span>
+                        <span class="tcon-visuallyhidden">toggle menu</span>
+                    </button>
+                </div>
+                <nav aria-labelledby="main navigation">
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">My Dashboard</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#" class="close-overlay-btn">Logout</a></li>
+                        <li>
+                            <div class="social">
+                                <a href="#" title="facebook"><i class="icon-facebook"></i></a>
+                                <a href="#" title="linkedin"><i class="icon-linkedin"></i></a>
+                                <a href="#" title="twitter"><i class="icon-twitter"></i></a>
+                                <a href="#" title="instgram"><i class="icon-instagram"></i></a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <!-- /header -->
+        <div class="page-header">
+            <nav aria-label="breadcrumb" role="navigation">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="#">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">My Dashboard</li>
+                </ol>
+            </nav>
+        </div>
+        <section class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="side">
+                        <div class="user">
+                            <img src="images/man.png">
+                            <div>
+                                <p>Supplier Name</p>
+                                <p>Cairo, Egypt</p>
+                                <select class="user-rating" data-readonly="true">
+                                    <option value=""></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option selected value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                                <p>Freelancer</p>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p>Supplier from 12-12-2017</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <p>Available to recive requests</p>
+                        </div>
+                        <div class="d-flex justify-content-around">
+                            <p><span>305</span>Profile Views</p>
+                            <p><span>15</span>Total Gigs</p>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="#"><i class="icon-facebook"></i></a>
+                            <a href="#"><i class="icon-linkedin"></i></a>
+                        </div>
+                        <a href="supplier-profile.html" class="btn btn-default btn-block">VIEW PROFILE</a>
+                    </div>
+                     <div class="filter">
+                        <h2>Filter</h2>
+                        <form accept-charset="utf-8">
+                            <div class="form-group">
+                                <label class="text-hide" for="searchFilter">search filter</label>
+                                <span>
+                                <input name="searchFilter" placeholder="Search" class="form-control" type="text">
+                            </span>
+                            </div>
+                            <div class="form-group">
+                                <label class="text-hide" for="gig">Select a gig</label>
+                                <select class="form-control" name="gig">
+                                    <option>New</option>
+                                    <option>Top</option>
+                                    <option>Old</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <label for="location">Date Range</label>
+                                    <div>
+                                        <input type="text" class="form-control" placeholder="from" id="from" name="from">
+                                        <input type="text" class="form-control" placeholder="to" id="to" name="to">
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-default btn-block">Filter</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <ul class="nav" id="dashboardTabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#myGigs" role="tab" aria-selected="true">My Gigs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#myServices" role="tab" aria-selected="true">My Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#myEarnings" role="tab" aria-selected="false">My Earnings</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#myMessages" role="tab" aria-selected="false">My Messages</a>
+                        </li>
+                        <li class="nav-item mr-auto">
+                            <a class="nav-link" data-toggle="tab" href="#myBank" role="tab" aria-selected="false">Bank Account Info</a>
+                        </li>
+                        <li class="nav-item notification">
+                            <a class="nav-link show active" data-notification='20' data-toggle="tab" href="#notifications" role="tab" aria-selected="false"><span class="icon-bell"></span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="dashboardTabsContent">
+                        <div class="tab-pane fade" id="myGigs" role="tabpanel">
+                            <div class="d-flex justify-content-end py-3">
+                                <select name="sort" class="form-control">
+                                    <option value="" selected disabled>Sort By</option>
+                                    <option value="date">Date</option>
+                                    <option value="rating">Rating</option>
+                                </select>
+                            </div>
+                            <div id="gigsList" data-children=".item">
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#gigsList" data-target="#gig1" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>#2395</span>
+                                            <span>Design 4 logo options</span>
+                                            <div class="user">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Customer Name</p>
+                                                </div>
+                                            </div>
+                                            <p>Requested 12-11-2017</p>
+                                            <p>15 Days To Deliver</p>
+                                            <span>450 EGP</span>
+                                            <p>New</p>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="mr-auto">
+                                                <h2>Design 4 logo options</h2>
+                                                <p>Logo Design - Design</p>
+                                                <p>Request # 1728</p>
+                                            </div>
+                                            <a href="#">Report a Conflict</a>
+                                            <button class="btn btn-default">done</button>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div id="gig1" class="item-content collapse" role="tabpanel">
+                                        <div class="row pt-5">
+                                            <div class="col-md-4">
+                                                <div class="user">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <a href="customer-profile.html" title="">
+                                                            <p>Customer Name</p>
+                                                        </a>
+                                                        <select class="user-rating" data-readonly="true">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option selected value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Price</label>
+                                                        <p>450 EGP</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Date Requested</label>
+                                                        <p>12-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Dead Line</label>
+                                                        <p>27-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Status</label>
+                                                        <p>Done</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Type</label>
+                                                        <p>Own Gig</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-requirment">
+                                                    <label>Company name meaning ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>Slogan or Tagline ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>Message you want the logo to deliver ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-review">
+                                                    <h4>Add Review</h4>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Rating</label>
+                                                        <select class="user-rating" data-readonly='false'>
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control counted" rows="1" placeholder="Add Review"></textarea>
+                                                        <span class="char">0/200</span>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block">POST REVIEW</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#gigsList" data-target="#gig2" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>#2395</span>
+                                            <span>Design 4 logo options</span>
+                                            <div class="user">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Customer Name</p>
+                                                </div>
+                                            </div>
+                                            <p>Requested 12-11-2017</p>
+                                            <p>15 Days To Deliver</p>
+                                            <span>450 EGP</span>
+                                            <p>New</p>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="mr-auto">
+                                                <h2>Design 4 logo options</h2>
+                                                <p>Logo Design - Design</p>
+                                                <p>Request # 1728</p>
+                                            </div>
+                                            <a href="#">Report a Conflict</a>
+                                            <button class="btn btn-default">done</button>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div id="gig2" class="item-content collapse" role="tabpanel">
+                                        <div class="row pt-5">
+                                            <div class="col-md-4">
+                                                <div class="user">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <a href="supplier-profile.html" title="">
+                                                            <p>Customer Name</p>
+                                                        </a>
+                                                        <select class="user-rating" data-readonly="true">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option selected value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Price</label>
+                                                        <p>450 EGP</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Date Requested</label>
+                                                        <p>12-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Dead Line</label>
+                                                        <p>27-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Status</label>
+                                                        <p>Done</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Type</label>
+                                                        <p>Freelance</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-requirment">
+                                                    <label>Company name meaning ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>Slogan or Tagline ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>Message you want the logo to deliver ?</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.sit amet, consectetur adipiscing elit, sed.</p>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-review">
+                                                    <h4>Add Review</h4>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Rating</label>
+                                                        <select class="user-rating" data-readonly='false'>
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control counted" rows="1" placeholder="Add Review"></textarea>
+                                                        <span class="char">0/200</span>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block">POST REVIEW</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item done">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#gigsList" data-target="#gig3" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>#2395</span>
+                                            <span>Design 4 logo options</span>
+                                            <div class="user">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Customer Name</p>
+                                                </div>
+                                            </div>
+                                            <p>Requested 12-11-2017</p>
+                                            <p>15 Days To Deliver</p>
+                                            <span>450 EGP</span>
+                                            <p>Done</p>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="myServices" role="tabpanel">
+                            <div class="d-flex justify-content-end py-4">
+                                <a href=".add-service" data-toggle="modal" class="btn btn-primary">add new service</a>
+                            </div>
+                            <div id="servicesList" data-children=".item">
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#servicesList" data-target="#service1" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>Design 4 logo options</span>
+                                            <p>3D modeling - Architects</p>
+                                            <span>450 EGP <p>per project</p></span>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="mr-auto">
+                                                <h2>Design 4 logo options</h2>
+                                                <p>Logo Design - Design</p>
+                                            </div>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div id="service1" class="item-content edit-service collapse" role="tabpanel">
+                                        <div class="row pt-5">
+                                            <div class="col-md-4">
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <label class="mr-auto">Price</label>
+                                                        <input type="text" class="form-control" placeholder="price" value="450">
+                                                        <select class="form-control" name="per">
+                                                            <option value="per-unit">Per Unit</option>
+                                                            <option value="per-project">Per Project</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between align-items-center">
+                                                        <label>Days to Deliver</label>
+                                                        <select class="form-control" name="days">
+                                                            <option value="10">10 Days</option>
+                                                            <option value="20">20 Days</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-requirment">
+                                                    <label>Description</label>
+                                                    
+                                                        <textarea class="form-control counted" rows="1" placeholder="Notes to customer"></textarea>
+                                                        <span class="char">0/200</span>
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-review item-questions">
+                                                    <h4>Requirements Gathering Questions</h4>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label class="text-hide">Company name meaning ?</label>
+                                                        <input type="text" class="form-control" placeholder="price" value="Company name meaning ?">
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label class="text-hide">Slogan or Tagline ?</label>
+                                                        <input type="text" class="form-control" placeholder="price" value="Slogan or Tagline ?">
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label class="text-hide">Message you want the logo to deliver ?</label>
+                                                         <input type="text" class="form-control" placeholder="price" value="Message you want the logo to deliver ?">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex justify-content-end py-4">
+                                            <button class="btn btn-defalut">Cancel</button>
+                                            <button class="btn btn-primary">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="myEarnings" role="tabpanel">
+                            <div class="mt-4"></div>
+                            <div class="item">
+                                <div class="item-trigger collapsed">
+                                    <div class="item-info-collapsed">
+                                        <span>#2395</span>
+                                        <span>Design 4 logo options</span>
+                                        <p>Customer Name</p>
+                                        <p>12-11-2017</p>
+                                        <span>450 EGP</span>
+                                        <p>Due</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-trigger collapsed">
+                                    <div class="item-info-collapsed">
+                                        <span>#2395</span>
+                                        <span>Design 4 logo options</span>
+                                        <p>Customer Name</p>
+                                        <p>12-11-2017</p>
+                                        <span>450 EGP</span>
+                                        <p>Paied</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="item-trigger collapsed">
+                                    <div class="item-info-collapsed">
+                                        <span>#2395</span>
+                                        <span>Design 4 logo options</span>
+                                        <p>Customer Name</p>
+                                        <p>12-11-2017</p>
+                                        <span>450 EGP</span>
+                                        <p>Due</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="paging mt-4">
+                                <p>1 - 15 of 100</p>
+                                <a href="#"><i class="icon-angle-left"></i></a>
+                                <a href="#" class="disabled"><i class="icon-angle-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="myMessages" role="tabpanel">
+                            <div id="messagesList" data-children=".item">
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#messagesList" data-target="#message1" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <div class="user mr-auto">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Customer Name</p>
+                                                </div>
+                                            </div>
+                                            <p>12-11-2017</p>
+                                            <i class="icon-angle-down"></i>
+                                            <div class="w-100">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="user mr-auto">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Supplier Name</p>
+                                                </div>
+                                            </div>
+                                            <p>12-11-2017</p>
+                                            <i class="icon-angle-down"></i>
+                                            <div class="w-100">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="message1" class="item-content collapse" role="tabpanel">
+                                        <div class="message">
+                                            <div class="message-detail">
+                                                <div class="user mr-auto">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <p>Customer Name</p>
+                                                    </div>
+                                                </div>
+                                                <p>12-11-2017</p>
+                                                <div class="w-100">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            <div class="message-detail">
+                                                <div class="user mr-auto">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <p>Supplier Name</p>
+                                                    </div>
+                                                </div>
+                                                <p>12-11-2017</p>
+                                                <div class="w-100">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 d-flex justify-content-end">
+                                            <a href=".message-modal" data-toggle='modal' class="btn btn-primary">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#messagesList" data-target="#message2" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <div class="user mr-auto">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Supplier Name</p>
+                                                </div>
+                                            </div>
+                                            <p>12-11-2017</p>
+                                            <i class="icon-angle-down"></i>
+                                            <div class="w-100">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="user mr-auto">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Supplier Name</p>
+                                                </div>
+                                            </div>
+                                            <p>12-11-2017</p>
+                                            <i class="icon-angle-down"></i>
+                                            <div class="w-100">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="message2" class="item-content collapse" role="tabpanel">
+                                        <div class="message">
+                                            <div class="message-detail">
+                                                <div class="user mr-auto">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <p>Supplier Name</p>
+                                                    </div>
+                                                </div>
+                                                <p>12-11-2017</p>
+                                                <div class="w-100">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="message">
+                                            <div class="message-detail">
+                                                <div class="user mr-auto">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <p>Supplier Name</p>
+                                                    </div>
+                                                </div>
+                                                <p>12-11-2017</p>
+                                                <div class="w-100">
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-3 d-flex justify-content-end">
+                                            <a href=".message-modal" data-toggle="modal" class="btn btn-primary">REPLY</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="myBank" role="tabpanel">
+                            <div class="edit-bank">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="d-flex justify-content-between">
+                                            <label>Beneficiary Name</label>
+                                            <input type="text" class="form-control" placeholder="Beneficiary Name" value="Full Name">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <label>Beneficiary account or IBAN number</label>
+                                            <input type="text" class="form-control" placeholder="Beneficiary account or IBAN number" value="349724948">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <label>Beneficiary full address</label>
+                                            <input type="text" class="form-control" placeholder="Beneficiary full address" value="90 Street 9, Maadi, Cairo, Egypt">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <label>Beneficiary mobile number</label>
+                                            <input type="text" class="form-control" placeholder="Beneficiary mobile number" value="012345678910">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="d-flex justify-content-between">
+                                            <label>Bank name</label>
+                                            <input type="text" class="form-control" placeholder="Bank name" value="Full Name">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <label>Banks address</label>
+                                            <input type="text" class="form-control" placeholder="Banks address" value="90 Street 9, Maadi, Cairo, Egypt">
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <label>SWIFT Code</label>
+                                            <input type="text" class="form-control" placeholder="SWIFT Code" value="472345909">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-end my-4">
+                                    <button class="btn btn-primary">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade show active" id="notifications" role="tabpanel">
+                            <div id="notificationList" data-children=".item">
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#notificationList" data-target="#notification1" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>Design 4 logo options</span>
+                                            <div class="user">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Supplier Name</p>
+                                                </div>
+                                            </div>
+                                            <p>Dead Line 12-11-2017</p>
+                                            <span class="badge">Logo Design</span>
+                                            <span class="badge">Logo Design</span>
+                                            <span>450 EGP</span>
+                                            <button class="btn btn-primary">Apply</button>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="mr-auto">
+                                                <h2>Design 4 logo options</h2>
+                                                <p>Logo Design - Design</p>
+                                            </div>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div id="notification1" class="item-content collapse" role="tabpanel">
+                                        <div class="row pt-5">
+                                            <div class="col-md-4">
+                                                <div class="user">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <a href="supplier-profile.html" title="">
+                                                            <p>Supplier Name</p>
+                                                        </a>
+                                                        <select class="user-rating" data-readonly="true">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option selected value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Price</label>
+                                                        <p>450 EGP</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Dead Line</label>
+                                                        <p>12-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Type</label>
+                                                        <p>Proposed</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Status</label>
+                                                        <p>Done</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-status">
+                                                    <div class="d-flex">
+                                                        <label>Skills</label>
+                                                        <div class="d-flex flex-wrap">
+                                                            <span class="badge">Logo Design</span>
+                                                            <span class="badge">Animation</span>
+                                                            <span class="badge">Graphic Design</span>
+                                                            <span class="badge">Infographics</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>CDiscription</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Attached Files</label>
+                                                        <a href="#" download="">File Attached-1</a>
+                                                        <a href="#" download="">File Attached-2</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-review">
+                                                    <h4>Apply Now</h4>
+                                                    <div class="custom-controls-stacked">
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">Delivery after 15 days</span>
+                                                        </label>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">You will pay 450 EGP</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control counted" rows="1" placeholder="Notes to customer"></textarea>
+                                                        <span class="char">0/200</span>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="item-trigger collapsed" data-toggle="collapse" data-parent="#notificationList" data-target="#notification2" aria-expanded="false">
+                                        <div class="item-info-collapsed">
+                                            <span>Design 4 logo options</span>
+                                            <div class="user">
+                                                <img src="images/man.png">
+                                                <div>
+                                                    <p>Supplier Name</p>
+                                                </div>
+                                            </div>
+                                            <p>Dead Line 12-11-2017</p>
+                                            <span class="badge">Logo Design</span>
+                                            <span class="badge">Logo Design</span>
+                                            <span>450 EGP</span>
+                                            <button class="btn btn-primary">Apply</button>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                        <div class="item-info">
+                                            <div class="mr-auto">
+                                                <h2>Design 4 logo options</h2>
+                                                <p>Logo Design - Design</p>
+                                            </div>
+                                            <i class="icon-angle-down"></i>
+                                        </div>
+                                    </div>
+                                    <div id="notification2" class="item-content collapse" role="tabpanel">
+                                        <div class="row pt-5">
+                                            <div class="col-md-4">
+                                                <div class="user">
+                                                    <img src="images/man.png">
+                                                    <div>
+                                                        <a href="supplier-profile.html" title="">
+                                                            <p>Supplier Name</p>
+                                                        </a>
+                                                        <select class="user-rating" data-readonly="true">
+                                                            <option value=""></option>
+                                                            <option value="1">1</option>
+                                                            <option value="2">2</option>
+                                                            <option selected value="3">3</option>
+                                                            <option value="4">4</option>
+                                                            <option value="5">5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Price</label>
+                                                        <p>450 EGP</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Dead Line</label>
+                                                        <p>12-11-2017</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Type</label>
+                                                        <p>Proposed</p>
+                                                    </div>
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Status</label>
+                                                        <p>Done</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-status">
+                                                    <div class="d-flex">
+                                                        <label>Skills</label>
+                                                        <div class="d-flex flex-wrap">
+                                                            <span class="badge">Logo Design</span>
+                                                            <span class="badge">Animation</span>
+                                                            <span class="badge">Graphic Design</span>
+                                                            <span class="badge">Infographics</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-requirment">
+                                                    <label>CDiscription</label>
+                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                                </div>
+                                                <div class="item-status">
+                                                    <div class="d-flex justify-content-between">
+                                                        <label>Attached Files</label>
+                                                        <a href="#" download="">File Attached-1</a>
+                                                        <a href="#" download="">File Attached-2</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="item-review">
+                                                    <h4>Apply Now</h4>
+                                                    <div class="custom-controls-stacked">
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">Delivery after 15 days</span>
+                                                        </label>
+                                                        <label class="custom-control custom-checkbox">
+                                                            <input class="custom-control-input" type="checkbox">
+                                                            <span class="custom-control-indicator"></span>
+                                                            <span class="custom-control-description">You will pay 450 EGP</span>
+                                                        </label>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea class="form-control counted" rows="1" placeholder="Notes to customer"></textarea>
+                                                        <span class="char">0/200</span>
+                                                    </div>
+                                                    <button class="btn btn-primary btn-block">Apply</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <a href="#">Writers-Editorial</a>
+                        <ul>
+                            <li><a href="" title="">Proofreading and Editing</a></li>
+                            <li><a href="" title="">Artical Writing</a></li>
+                            <li><a href="" title="">CV Writing</a></li>
+                            <li><a href="" title="">Cover letter Writing</a></li>
+                            <li><a href="" title="">CV Writing</a></li>
+                            <li><a href="" title="">Research Writing</a></li>
+                            <li><a href="" title="">Script Writing</a></li>
+                            <li><a href="" title="">User Guides and Manuals</a></li>
+                            <li><a href="" title="">Reports</a></li>
+                            <li><a href="" title="">Blog Writing</a></li>
+                            <li><a href="" title="">Academic Writing</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#">IT</a>
+                        <ul>
+                            <li><a href="" title="">Web designer</a></li>
+                            <li><a href="" title="">Web developer</a></li>
+                            <li><a href="" title="">Software designer</a></li>
+                            <li><a href="" title="">Programing</a></li>
+                            <li><a href="" title="">Mobile application developer</a></li>
+                            <li><a href="" title="">Games Developer</a></li>
+                            <li><a href="" title="">Technician</a></li>
+                            <li><a href="" title="">Javascript</a></li>
+                            <li><a href="" title="">Adobe InDesign</a></li>
+                        </ul>
+                        <a href="#">Legal</a>
+                        <ul>
+                            <li><a href="" title="">Contract writing</a></li>
+                            <li><a href="" title="">Contract review</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#">Social Media</a>
+                        <ul>
+                            <li><a href="" title="">Social Media Account Manager</a></li>
+                            <li><a href="" title="">Digital Marketing Expert</a></li>
+                            <li><a href="" title="">SEO</a></li>
+                            <li><a href="" title="">SEM</a></li>
+                            <li><a href="" title="">Web Content</a></li>
+                        </ul>
+                        <a href="#">Design</a>
+                        <ul>
+                            <li><a href="" title="">Logo</a></li>
+                            <li><a href="" title="">Business Cards</a></li>
+                            <li><a href="" title="">Adverts</a></li>
+                            <li><a href="" title="">Graphic Design</a></li>
+                            <li><a href="" title="">Infographics</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#">Architects</a>
+                        <ul>
+                            <li><a href="" title="">Architects Design</a></li>
+                            <li><a href="" title="">Interior Design</a></li>
+                            <li><a href="" title="">3D Modeling</a></li>
+                        </ul>
+                        <a href="#">Art</a>
+                        <ul>
+                            <li><a href="" title="">Photography</a></li>
+                            <li><a href="" title="">Videography</a></li>
+                            <li><a href="" title="">Photo Editing</a></li>
+                            <li><a href="" title="">Creative Art</a></li>
+                            <li><a href="" title="">Animator</a></li>
+                            <li><a href="" title="">Caricaturist</a></li>
+                            <li><a href="" title="">Wall painting art</a></li>
+                            <li><a href="" title="">Art and Canvas</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#">Consultancy Services</a>
+                        <ul>
+                            <li><a href="" title="">Financial Consultancy</a></li>
+                            <li><a href="" title="">Legal Consultancy</a></li>
+                            <li><a href="" title="">Public Relations Consultancy</a></li>
+                            <li><a href="" title="">Human Resources Consultancy</a></li>
+                            <li><a href="" title="">Social Media Consultancy</a></li>
+                            <li><a href="" title="">IT Consultancy</a></li>
+                            <li><a href="" title="">Market Research</a></li>
+                            <li><a href="" title="">Feasibility Study</a></li>
+                            <li><a href="" title="">Audit Services</a></li>
+                        </ul>
+                        <a href="#">Sports</a>
+                        <ul>
+                            <li><a href="" title="">Personal Trainer</a></li>
+                            <li><a href="" title="">Swimming instructors</a></li>
+                            <li><a href="" title="">Yoga</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2">
+                        <a href="#">Translation</a>
+                        <ul>
+                            <li><a href="" title="">English</a></li>
+                            <li><a href="" title="">French</a></li>
+                            <li><a href="" title="">German</a></li>
+                            <li><a href="" title="">Spanish</a></li>
+                            <li><a href="" title="">Italian</a></li>
+                        </ul>
+                        <a href="#">Tutoring</a>
+                        <ul>
+                            <li><a href="" title="">English</a></li>
+                            <li><a href="" title="">French</a></li>
+                            <li><a href="" title="">German</a></li>
+                            <li><a href="" title="">Spanish</a></li>
+                            <li><a href="" title="">Italian</a></li>
+                            <li><a href="" title="">IELTS</a></li>
+                            <li><a href="" title="">SAT</a></li>
+                            <li><a href="" title="">Toefl</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="container">
+                    <div>
+                        <p>© 2017- FelxiGigs. All rights reserved. Designed & Developed by Road9 Media</p>
+                        <a href="#" title="">View Terms & Conditions</a>
+                        <a href="#" title="">View Privacy policy</a>
+                    </div>
+                    <div>
+                        <img src="images/mastercard.png" alt="">
+                        <img src="images/bank.png" alt="">
+                        <img src="images/visa.png" alt="">
+                        <img src="images/app-store.png" alt="">
+                        <img src="images/play-store.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/chosen.jquery.min.js"></script>
+    <script src="js/jquery.barrating.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

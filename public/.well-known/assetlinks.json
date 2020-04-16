@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "crowd.road9media.info",
+               "sha256_cert_fingerprints": ["45:FF:2E:44:34:FE:C2:AB:80:5F:9B:21:03:22:51:BC:37:71:F9:6B:41:37:F2:E2:7B:09:1F:B7:6B:C3:12:F9"] }
+               
+},{
+  "relation": ["delegate_permission/common.get_login_creds"],
+  "target" : { "namespace": "android_app", "package_name": "crowd.road9media.info",
+               "sha256_cert_fingerprints": ["45:FF:2E:44:34:FE:C2:AB:80:5F:9B:21:03:22:51:BC:37:71:F9:6B:41:37:F2:E2:7B:09:1F:B7:6B:C3:12:F9"] }
+}]

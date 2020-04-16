@@ -1,0 +1,14 @@
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' DeadlineChecker:run > '/dev/null' 2>&1
+Running scheduled command: '/opt/php70/bin/php' 'artisan' AprovalChecker:run > '/dev/null' 2>&1

@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="ar">
+
+<head>
+	<title>Flexigigs</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="images/favicon/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+	<!-- jQuery UI CSS -->
+	<link type="text/css" rel="stylesheet" href="./css/jquery-ui.structure.min.css">
+	<link type="text/css" rel="stylesheet" href="./css/jquery-ui.min.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz"
+	 crossorigin="anonymous">
+	
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+
+	<!-- Swiper CSS -->
+	<link type="text/css" rel="stylesheet" href="./css/swiper.min.css">
+	<!-- Site CSS -->
+	<link type="text/css" rel="stylesheet" href="./css/style.css">
+	<link type="text/css" rel="stylesheet" href="./css/style-rtl.min.css">
+	<!-- Modernizer -->
+	<script src="./js/modernizr.custom.js"></script>
+	<script src="./js/jquery.min.js"></script>
+	<!-- <script src='https://www.google.com/recaptcha/api.js'></script> -->
+</head>
+
+<body dir="rtl">
+	<!-- Login Modal -->
+	<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Login</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form accept-charset="utf-8">
+						<div class="form-group">
+							<label class="text-hide" for="username">username</label>
+							<input type="text" name="username" placeholder="Username" class="form-control">
+						</div>
+						<div class="form-group">
+							<label class="text-hide" for="password">Password</label>
+							<input type="password" name="password" placeholder="Password" class="form-control">
+						</div>
+						<a href="#" title="forgot password">Forgot Password?</a>
+						<button type="button" class="btn btn-default btn-block">Login</button>
+						<button type="button" class="btn btn-default btn-block">
+							<i class="icon-facebook"></i>login using facebook</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<p>Don't have an account?</p>
+					<a href="#" title="register now" class="register-link">Register Now</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Register Modal -->
+	<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Register</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul class="nav justify-content-center" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" data-toggle="tab" role="tab" href="#findagig">Find a gig</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" data-toggle="tab" role="tab" href="#postagig">Post a gig</a>
+						</li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane fade show active" id="findagig" role="tabpanel">
+							<form accept-charset="utf-8">
+								<div class="form-row">
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label class="text-hide" for="firstname">firstname</label>
+											<input type="text" name="firstname" placeholder="First Name*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="username">username</label>
+											<input type="text" name="username" placeholder="Username*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="password">Password</label>
+											<input type="password" name="password" placeholder="Password*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="retypepassword">Retype Password</label>
+											<input type="password" name="retypepassword" placeholder="Retype Password*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="facebook">facebook</label>
+											<input type="text" name="facebook" placeholder="Facebook URL" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="linkedin">linkedin</label>
+											<input type="text" name="linkedin" placeholder="Linkedin URL" class="form-control">
+										</div>
+										<div class="g-recaptcha" data-sitekey="6LfbiTwUAAAAAOIwebxcVcBYAvhHDMaromPJ4y8b"></div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label class="text-hide" for="lastname">lastname</label>
+											<input type="text" name="lastname" placeholder="Last Name*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="email">email</label>
+											<input type="email" name="email" placeholder="Email*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="phone">phone</label>
+											<input type="text" name="phone" placeholder="Phone" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="country">country</label>
+											<input type="text" name="country" placeholder="Country*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="city">city</label>
+											<input type="text" name="city" placeholder="City*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="company">company</label>
+											<input type="text" name="company" placeholder="Company Name" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="companyURL">company url</label>
+											<input type="text" name="companyURL" placeholder="Company URL" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="custom-file">
+												<input type="file" id="file2" class="custom-file-input">
+												<span class="custom-file-control"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="row">
+											<div class="col">
+												<button type="button" class="btn btn-default btn-block">Register</button>
+											</div>
+											<div class="col">
+												<button type="button" class="btn btn-default btn-block">
+													<i class="icon-facebook"></i>Register using facebook</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="tab-pane fade" id="postagig" role="tabpanel">
+							<form accept-charset="utf-8">
+								<div class="form-row">
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label class="text-hide" for="firstname">firstname</label>
+											<input type="text" name="firstname" placeholder="First Name*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="username">username</label>
+											<input type="text" name="username" placeholder="Username*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="password">Password</label>
+											<input type="password" name="password" placeholder="Password*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="retypepassword">Retype Password</label>
+											<input type="password" name="retypepassword" placeholder="Retype Password*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="facebook">facebook</label>
+											<input type="text" name="facebook" placeholder="Facebook URL" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="linkedin">linkedin</label>
+											<input type="text" name="linkedin" placeholder="Linkedin URL" class="form-control">
+										</div>
+										<div class="g-recaptcha" data-sitekey="6LfbiTwUAAAAAOIwebxcVcBYAvhHDMaromPJ4y8b"></div>
+									</div>
+									<div class="col-lg-6">
+										<div class="form-group">
+											<label class="text-hide" for="lastname">lastname</label>
+											<input type="text" name="lastname" placeholder="Last Name*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="email">email</label>
+											<input type="email" name="email" placeholder="Email*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="phone">phone</label>
+											<input type="text" name="phone" placeholder="Phone" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="country">country</label>
+											<input type="text" name="country" placeholder="Country*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="city">city</label>
+											<input type="text" name="city" placeholder="City*" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="company">company</label>
+											<input type="text" name="company" placeholder="Company Name" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="text-hide" for="companyURL">company url</label>
+											<input type="text" name="companyURL" placeholder="Company URL" class="form-control">
+										</div>
+										<div class="form-group">
+											<label class="custom-file">
+												<input type="file" id="file2" class="custom-file-input">
+												<span class="custom-file-control"></span>
+											</label>
+										</div>
+									</div>
+									<div class="col-12">
+										<div class="row">
+											<div class="col">
+												<button type="button" class="btn btn-default btn-block">Register</button>
+											</div>
+											<div class="col">
+												<button type="button" class="btn btn-default btn-block">
+													<i class="icon-facebook"></i>Register using facebook</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="site-wrap inner">
+		<header class="container-fluid">
+			<a href="index.html" class="logo" title="home">
+				<img src="images/logo.png" alt="logo">
+			</a>
+			<div class="search input-group">
+				<input type="text" class="form-control" placeholder="What is your next gig" aria-label="What is your next gig">
+				<span class="input-group-btn">
+					<button class="btn btn-primary" type="button">Search</button>
+				</span>
+			</div>
+			<div class="top-nav">
+				<button type="button" id="trigger-overlay" class="tcon tcon-menu--xcross" aria-label="toggle menu">
+					<span class="tcon-menu__lines" aria-hidden="true"></span>
+					<span class="tcon-visuallyhidden">toggle menu</span>
+				</button>
+				<div class="btn-group btn-group-sm" role="group" aria-label="login and register">
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#loginModal">Login</button>
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#registerModal">Register</button>
+            </div>
+				<div class="user-welcome">
+					<img src="images/man.png" alt="user image">
+					<p>مرحبا, أسم العميل</p>
+				</div>
+				<div class="social">
+					<a href="#" title="facebook">
+						<i class="icon-facebook"></i>
+					</a>
+					<a href="#" title="linkedin">
+						<i class="icon-linkedin"></i>
+					</a>
+					<a href="#" title="twitter">
+						<i class="icon-twitter"></i>
+					</a>
+					<a href="#" title="instgram">
+						<i class="icon-instagram"></i>
+					</a>
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AR</a>
+						<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+							<a class="dropdown-item" href="#">EN</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="overlay overlay-slidedown">
+				<div class="container-fluid"
+					<button type="button" id="close-overlay" class="tcon tcon-menu--xcross tcon-transform close-overlay-btn" aria-label="toggle menu">
+						<span class="tcon-menu__lines" aria-hidden="true"></span>
+						<span class="tcon-visuallyhidden">toggle menu</span>
+					</button>
+					<i class="to-level-1 icon-angle-right mr-2 float-right position-absolute d-none"></i>
+				</div>
+				<i class="icon-angel-left"></i>
+				<nav aria-labelledby="main navigation">
+					<ul class="nav-level-1">
+						<li>
+							<a href="#">الرئيسية</a>
+						</li>
+						<li>
+							<a href="#">الأقسام</a>
+						</li>
+						<li>
+							<a href="#">لوحة التحكم</a>
+						</li>
+						<li id="help-element">
+							<a href="#" class="help">مساعدة
+								<i class="icon-angle-right ml-2"></i>
+							</a>
+						</li>
+						<li>
+							<a href="#" class="close-overlay-btn">تسجيل الخروج</a>
+						</li>
+						<li class="d-lg-none">
+							<div class="dropdown">
+								<a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">عربي</a>
+								<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+									<a class="dropdown-item" href="#">En</a>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="social">
+								<a href="#" title="facebook">
+									<i class="icon-facebook"></i>
+								</a>
+								<a href="#" title="linkedin">
+									<i class="icon-linkedin"></i>
+								</a>
+								<a href="#" title="twitter">
+									<i class="icon-twitter"></i>
+								</a>
+								<a href="#" title="instgram">
+									<i class="icon-instagram"></i>
+								</a>
+							</div>
+						</li>
+					</ul>
+					<ul class="nav-level-2 d-none">
+						<li>
+							<a href="" class="text-capitalize">الأسئلة المتكررة</a>
+						</li>
+						<li>
+							<a href="" class="text-capitalize">تواصل معنا</a>
+						</li>
+						<li>
+							<a href="" class="text-capitalize">كيف تعمل</a>
+						</li>
+						<li>
+							<a href="" class="text-capitalize">الشروط والأحكام</a>
+						</li>
+						<li>
+							<a href="" class="text-capitalize">سياسة الخصوصية</a>
+						</li>
+						<li>
+							<a href="" class="text-capitalize">سياسة الإسترجاع</a>
+						</li>
+					</ul>
+					<script>
+						(function () {
+							$('.help').click(function (e) {
+								e.preventDefault();
+								$('.nav-level-1').addClass('d-none');
+								$('.to-level-1').removeClass('d-none');
+								$('.nav-level-2').removeClass('d-none');
+							});
+							$('.to-level-1').click(function (e) {
+								e.preventDefault();
+								$('.nav-level-1').removeClass('d-none');
+								$(this).addClass('d-none');
+								$('.nav-level-2').addClass('d-none');
+							});
+						})();
+					</script>
+				</nav>
+			</div>
+		</header>
+		<!-- /header -->
+
+		<section class="mb-0" id="service-order-confirm">
+			<div class="container">
+				<div class="row">
+					<div class="text-center col-lg-2" id="confirmation-icon">
+						<i class="fas fa-check fa-6x text-white pl-4 pr-4 pt-4 pb-4 mt-lg-4 rounded-circle"></i>
+					</div>
+					<div class="text-left col-lg-10" id="confirmation-msg">
+						<h1 class="text-uppercase font-weight-bold mt-0 mb-4">تم قبول طلبك بنجاح</h1>
+						<p class="text-dark text-capitalize font-weight-light mt-4 mb-4 h4">يتم تأكيد الدفع الخاص بك ويتم إرسال الطلب إلي المورد <br> يمكنك متابعه طلبك من صفحة طلباتي في ملفك الشخصي</p>
+						<p class="text-dark text-capitalize mt-4 mb-5">
+							  <b class="mr-4">رقم الطلب: </b>3726
+						</p>
+						<a href="#" class="text-capitalize float-right">
+							انتقل إلي صفحتي الشخصية
+							<i class="icon-angle-left mr-3"></i>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<footer>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-2">
+						<a href="#">كًتاب - محررين</a>
+						<ul>
+							<li>
+								<a href="" title="">التدقيق والتحرير</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة المادة</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة السيرة الذاتية</a>
+							</li>
+							<li>
+								<a href="" title="">تغطية خطاب الكتابة</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة السيرة الذاتية</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة البحوث</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة السيناريو</a>
+							</li>
+							<li>
+								<a href="" title="">أدلة المستخدم والأدلة</a>
+							</li>
+							<li>
+								<a href="" title="">تقارير</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة المدونة</a>
+							</li>
+							<li>
+								<a href="" title="">كتابة أكاديمية</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">تكنولوجيا المعلومات</a>
+						<ul>
+							<li>
+								<a href="" title="">مصمم ويب</a>
+							</li>
+							<li>
+								<a href="" title="">مطور ويب</a>
+							</li>
+							<li>
+								<a href="" title="">مطور برامج</a>
+							</li>
+							<li>
+								<a href="" title="">برمجة</a>
+							</li>
+							<li>
+								<a href="" title="">مبرمج تطبيقات الجوال</a>
+							</li>
+							<li>
+								<a href="" title="">مطور الألعاب</a>
+							</li>
+							<li>
+								<a href="" title="">فني</a>
+							</li>
+							<li>
+								<a href="" title="">Javascript</a>
+							</li>
+							<li>
+								<a href="" title="">Adobe InDesign</a>
+							</li>
+						</ul>
+						<a href="#">قانون</a>
+						<ul>
+							<li>
+								<a href="" title="">كتابة العقود</a>
+							</li>
+							<li>
+								<a href="" title="">مراجعة العقود</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">وسائل التواصل الإجتماعية</a>
+						<ul>
+							<li>
+								<a href="" title="">مدير حسابات وسائل التواصل الإجتماعية</a>
+							</li>
+							<li>
+								<a href="" title="">خبير التسويق الرقمي</a>
+							</li>
+							<li>
+								<a href="" title="">SEO</a>
+							</li>
+							<li>
+								<a href="" title="">SEM</a>
+							</li>
+							<li>
+								<a href="" title="">محتوي الويب</a>
+							</li>
+						</ul>
+						<a href="#">تصميم</a>
+						<ul>
+							<li>
+								<a href="" title="">شعار</a>
+							</li>
+							<li>
+								<a href="" title="">بطاقات العمل</a>
+							</li>
+							<li>
+								<a href="" title="">الإعلانات</a>
+							</li>
+							<li>
+								<a href="" title="">التصميم الجرافيكي</a>
+							</li>
+							<li>
+								<a href="" title="">الرسوم البيانية</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">عمارة</a>
+						<ul>
+							<li>
+								<a href="" title="">تصميم العمارة</a>
+							</li>
+							<li>
+								<a href="" title="">تصميم داخلي</a>
+							</li>
+							<li>
+								<a href="" title="">النمذجة ثلاثية الإبعاد</a>
+							</li>
+						</ul>
+						<a href="#">فنون</a>
+						<ul>
+							<li>
+								<a href="" title="">التصوير</a>
+							</li>
+							<li>
+								<a href="" title="">فيديو</a>
+							</li>
+							<li>
+								<a href="" title="">تحرير الصور</a>
+							</li>
+							<li>
+								<a href="" title="">الفن الإبداعي</a>
+							</li>
+							<li>
+								<a href="" title="">الرسوم المتحركة</a>
+							</li>
+							<li>
+								<a href="" title="">الرسوم الكاريكاتوري</a>
+							</li>
+							<li>
+								<a href="" title="">لوحات فنية جدارية</a>
+							</li>
+							<li>
+								<a href="" title="">الفن وقماش</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">خدمات استشارية</a>
+						<ul>
+							<li>
+								<a href="" title="">استشارات مالية</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات قانونية</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات العلاقات العامة</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات الموارد البشرية</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات وسائل التواصل الاجتماعية</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات تكنولوجيا المعلومات</a>
+							</li>
+							<li>
+								<a href="" title="">استشارات تسويقية</a>
+							</li>
+							<li>
+								<a href="" title="">دراسة الجدوي</a>
+							</li>
+							<li>
+								<a href="" title="">خدمات التدقيق</a>
+							</li>
+						</ul>
+						<a href="#">رياضة</a>
+						<ul>
+							<li>
+								<a href="" title="">المدرب الشخصي</a>
+							</li>
+							<li>
+								<a href="" title="">مدربوا السباحة</a>
+							</li>
+							<li>
+								<a href="" title="">اليوغا</a>
+							</li>
+						</ul>
+					</div>
+					<div class="col-lg-2">
+						<a href="#">ترجمة</a>
+						<ul>
+							<li>
+								<a href="" title="">الإنجليزية</a>
+							</li>
+							<li>
+								<a href="" title="">الفرنسية</a>
+							</li>
+							<li>
+								<a href="" title="">الألمانية</a>
+							</li>
+							<li>
+								<a href="" title="">الأسبانية</a>
+							</li>
+							<li>
+								<a href="" title="">الأيطالية</a>
+							</li>
+						</ul>
+						<a href="#">الدروس الخصوصية</a>
+						<ul>
+							<li>
+								<a href="" title="">الإنجليزية</a>
+							</li>
+							<li>
+								<a href="" title="">الفرنسية</a>
+							</li>
+							<li>
+								<a href="" title="">الألمانية</a>
+							</li>
+							<li>
+								<a href="" title="">الأسبانية</a>
+							</li>
+							<li>
+								<a href="" title="">الأيطالية</a>
+							</li>
+							<li>
+								<a href="" title="">IELTS</a>
+							</li>
+							<li>
+								<a href="" title="">SAT</a>
+							</li>
+							<li>
+								<a href="" title="">Toefl</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<div>
+						<p>© 2017- فليكسي جيجز. كل الحقوق محفوظة. تصميم Road9 Media</p>
+						<a href="#" title="">عرض الشروط والأحكام</a>
+						<a href="#" title="">عرض سياسة الخصوصية</a>
+					</div>
+					<div>
+						<img src="images/mastercard.png" alt="">
+						<img src="images/bank.png" alt="">
+						<img src="images/visa.png" alt="">
+						<img src="images/app-store.png" alt="">
+						<img src="images/play-store.png" alt="">
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	
+	<script src="./js/jquery-ui.min.js"></script>
+	<script src="./js/popper.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<script src="./js/swiper.min.js"></script>
+	<script src="./js/owl.carousel.min.js"></script>
+	<script src="./js/classie.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>

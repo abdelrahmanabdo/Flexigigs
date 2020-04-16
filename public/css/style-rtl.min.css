@@ -1,0 +1,413 @@
+@charset "UTF-8";@font-face{font-family:Lato-Light;src:url("../fonts/hinted-Lato-Light.eot");src:url("../fonts/hinted-Lato-Light.eot?#iefix") format("embedded-opentype"),url("../fonts/hinted-Lato-Light.woff2") format("woff2"),url("../fonts/hinted-Lato-Light.woff") format("woff"),url("../fonts/hinted-Lato-Light.ttf") format("truetype"),url("../fonts/hinted-Lato-Light.svg#Lato-Light") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Lato-Regular;src:url("../fonts/hinted-Lato-Regular.eot");src:url("../fonts/hinted-Lato-Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/hinted-Lato-Regular.woff2") format("woff2"),url("../fonts/hinted-Lato-Regular.woff") format("woff"),url("../fonts/hinted-Lato-Regular.ttf") format("truetype"),url("../fonts/hinted-Lato-Regular.svg#Lato-Regular") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Lato-Italic;src:url("../fonts/hinted-Lato-Italic.eot");src:url("../fonts/hinted-Lato-Italic.eot?#iefix") format("embedded-opentype"),url("../fonts/hinted-Lato-Italic.woff2") format("woff2"),url("../fonts/hinted-Lato-Italic.woff") format("woff"),url("../fonts/hinted-Lato-Italic.ttf") format("truetype"),url("../fonts/hinted-Lato-Italic.svg#Lato-Italic") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Lato-Bold;src:url("../fonts/hinted-Lato-Bold.eot");src:url("../fonts/hinted-Lato-Bold.eot?#iefix") format("embedded-opentype"),url("../fonts/hinted-Lato-Bold.woff2") format("woff2"),url("../fonts/hinted-Lato-Bold.woff") format("woff"),url("../fonts/hinted-Lato-Bold.ttf") format("truetype"),url("../fonts/hinted-Lato-Bold.svg#Lato-Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Cairo-Black;src:url("../fonts/Cairo-Black.eot");src:url("../fonts/Cairo-Black.eot?#iefix") format("embedded-opentype"),url("../fonts/Cairo-Black.woff2") format("woff2"),url("../fonts/Cairo-Black.woff") format("woff"),url("../fonts/Cairo-Black.ttf") format("truetype"),url("../fonts/Cairo-Black.svg#Cairo-Black") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Cairo-Bold;src:url("../fonts/Cairo-Bold.eot");src:url("../fonts/Cairo-Bold.eot?#iefix") format("embedded-opentype"),url("../fonts/Cairo-Bold.woff2") format("woff2"),url("../fonts/Cairo-Bold.woff") format("woff"),url("../fonts/Cairo-Bold.ttf") format("truetype"),url("../fonts/Cairo-Bold.svg#Cairo-Bold") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Cairo-Light;src:url("../fonts/Cairo-Light.eot");src:url("../fonts/Cairo-Light.eot?#iefix") format("embedded-opentype"),url("../fonts/Cairo-Light.woff2") format("woff2"),url("../fonts/Cairo-Light.woff") format("woff"),url("../fonts/Cairo-Light.ttf") format("truetype"),url("../fonts/Cairo-Light.svg#Cairo-Light") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:Cairo-Regular;src:url("../fonts/Cairo-Regular.eot");src:url("../fonts/Cairo-Regular.eot?#iefix") format("embedded-opentype"),url("../fonts/Cairo-Regular.woff2") format("woff2"),url("../fonts/Cairo-Regular.woff") format("woff"),url("../fonts/Cairo-Regular.ttf") format("truetype"),url("../fonts/Cairo-Regular.svg#Cairo-Regular") format("svg");font-weight:normal;font-style:normal}
+@font-face{font-family:'icomoon';src:url("../fonts/icomoon.eot?lhg4y2");src:url("../fonts/icomoon.eot?lhg4y2#iefix") format("embedded-opentype"),url("../fonts/icomoon.ttf?lhg4y2") format("truetype"),url("../fonts/icomoon.woff?lhg4y2") format("woff"),url("../fonts/icomoon.svg?lhg4y2#icomoon") format("svg");font-weight:normal;font-style:normal}
+[class^='icon-'],[class*=' icon-']{font-family:'icomoon' !important;speak:none;font-style:normal;font-weight:normal;font-variant:normal;text-transform:none;line-height:1;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.icon-bell:before{content:'\f0f3'}
+.icon-check:before{content:'\f00c'}
+.icon-close:before{content:'\f00d'}
+.icon-star:before{content:'\f005'}
+.icon-plus:before{content:'\f067'}
+.icon-search:before{content:'\f002'}
+.icon-heart:before{content:'\f004'}
+.icon-play:before{content:'\f04b'}
+.icon-share:before{content:'\f064'}
+.icon-comment:before{content:'\f075'}
+.icon-twitter:before{content:'\f099'}
+.icon-facebook:before{content:'\f09a'}
+.icon-instagram:before{content:'\f16d'}
+.icon-caret-down:before{content:'\f0d7'}
+.icon-linkedin:before{content:'\f0e1'}
+.icon-angle-left:before{content:'\f104'}
+.icon-angle-right:before{content:'\f105'}
+.icon-angle-down:before{content:'\f107'}
+.icon-writers:before{content:'\e900'}
+.icon-it:before{content:'\e901'}
+.icon-social-media:before{content:'\e902'}
+.icon-design:before{content:'\e903'}
+.icon-legal:before{content:'\e904'}
+.icon-architects:before{content:'\e905'}
+.icon-art:before{content:'\e906'}
+.icon-consultancy:before{content:'\e907'}
+.icon-tutoring:before{content:'\e908'}
+.icon-translation:before{content:'\e909'}
+.icon-specialized-translation:before{content:'\e90a'}
+.icon-sports:before{content:'\e90b'}
+.icon-fashion:before{content:'\e90c'}
+.icon-administrative:before{content:'\e90d'}
+.icon-part-timers:before{content:'\e90e'}
+.icon-internships:before{content:'\e90f'}
+.icon-cogs:before{content:'\e910'}
+.cat-link h3,.sub-cat-link h3{font-family:"Cairo-Regular";margin-right:5px;margin-left:0}
+.alt .container .row .col-md-3{padding-left:0}
+@media(max-width:767px){.cat-link h3,.sub-cat-link h3{margin-right:initial;margin-left:auto}
+}body{font-family:"Cairo-Light"}
+.inner header .search{right:5rem;left:initial !important}
+footer div[class*="col-"] a{text-align:right;font-family:"Cairo-Regular"}
+footer div[class*="col-"]>a{font-family:"Cairo-Bold"}
+.footer-bottom p,.footer-bottom a{margin-left:15px;margin-right:0}
+.footer-bottom img{margin-right:15px;margin-left:0}
+.user-welcome p{font-family:"Cairo-Regular";margin:0 6px 0 0}
+.user-welcome .dropdown-menu:before{left:5px;right:initial}
+.section-title h2{font-family:"Cairo-Bold"}
+.section-title a{font-family:"Cairo-Regular"}
+.page-header h1{font-family:"Cairo-Bold"}
+.page-header.alt h1{text-align:right}
+.page-header.alt h1 i{margin-left:8px;margin-right:0}
+.page-header.alt p{text-align:right}
+.breadcrumb{padding-left:1.25rem;padding-right:0}
+.breadcrumb-item{font-family:"Cairo-Regular"}
+.breadcrumb-item+.breadcrumb-item::before{padding-left:.9375rem;padding-right:.9375rem}
+.btn{font-family:"Cairo-Regular" !important}
+.top-nav{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.top-nav .btn-group .btn:first-child{border-bottom-right-radius:15px;border-top-right-radius:15px}
+.top-nav .btn-group .btn:last-child{border-bottom-left-radius:15px;border-top-left-radius:15px}
+.social a{margin-right:15px;margin-left:0}
+.form-control[name="supplier_type"]{height:35px !important}
+.form-control.alt{font-family:"Cairo-Regular";padding-left:initial;padding-right:0}
+.overlay .to-level-1{cursor:pointer;left:initial;right:30px}
+@media(max-width:991px){.overlay .to-level-1{left:initial;right:15px}
+}.modal-content .form-group ~ a,.request .form-group ~ a{font-family:"Cairo-Regular";font-style:italic;text-align:right}
+.modal-content .form-group>p,.request .form-group>p{text-align:right;font-family:"Cairo-Regular";font-style:italic}
+.modal-content .form-control,.modal-content .custom-file-control,.request .form-control,.request .custom-file-control{font-family:"Cairo-Regular";padding-right:0;padding-left:initial}
+.modal-content .custom-file .custom-file-control,.request .custom-file .custom-file-control{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.modal-content .custom-file .custom-file-control:before,.request .custom-file .custom-file-control:before{left:initial}
+.modal-content .btn i{margin-left:5px;margin-right:0}
+.modal-content .nav-link{font-family:"Cairo-Regular"}
+.modal-header .modal-title{font-family:"Cairo-Bold"}
+.modal-footer p{font-family:"Cairo-Regular"}
+.modal-footer a{font-family:"Cairo-Regular";font-style:italic}
+.tcon-menu__lines::before,.tcon-menu__lines::after{content:"";left:initial;right:0}
+.overlay{left:initial;right:0}
+.overlay ul li a:after{left:initial;right:0}
+.overlay .nav-level-1 .dropdown{width:100%}
+.overlay .nav-level-1 .dropdown:after{left:initial;right:0}
+.overlay .nav-level-1 .dropdown .dropdown-toggle:after{right:auto !important;left:75px !important}
+@media(max-width:991px){.overlay .nav-level-1 .dropdown .dropdown-toggle:after{left:15px !important;right:initial !important}
+}.overlay .nav-level-1 .dropdown-menu{left:initial !important;right:0}
+@media(max-width:991px){.overlay .nav-level-1 .dropdown-menu{right:6px !important;left:initial !important}
+}.br-theme-fontawesome-stars .br-widget{padding-left:20px;padding-right:initial}
+.br-theme-fontawesome-stars .br-widget .br-current-rating{font-family:"Cairo-Light"}
+.filter{padding:1.375rem initial 2.5rem 1.375rem}
+.filter .btn{font-family:"Cairo-Bold"}
+.filter .resetForm{left:15px;right:initial;color:#296590}
+.filter h2{font-family:"Cairo-Bold"}
+.filter label.text-hide+span:before{left:15px;right:initial}
+.filter .form-control{font-family:"Cairo-Regular";height:40px !important}
+.filter .d-flex div input:first-of-type{margin-left:10px;margin-right:0}
+.ui-selectmenu-button.form-control{font-family:"Cairo-Regular";padding-right:0;padding-left:initial}
+.ui-menu .ui-menu-item .ui-menu-item-wrapper{font-family:"Cairo-Regular"}
+.select-label ~ .ui-selectmenu-button.form-control{text-align:right}
+.range-wrap input[type="text"]{font-family:"Cairo-Regular"}
+.range-wrap .rating-range:before{right:25%;left:0}
+.range-wrap .rating-range:after{right:75%;left:0}
+.range-wrap .rating-range .mid-mark{right:50%;left:0}
+.cat-link h3{font-family:"Cairo-Regular";margin-left:0;margin-right:5px}
+@media(max-width:767px){.cat-link h3{margin-left:auto;margin-right:initial}
+}@media(max-width:991px){.cat-link h3{margin-left:auto;margin-right:initial}
+}label{font-family:"Cairo-Regular"}
+.owl-carousel .owl-item{float:right;-webkit-backface-visibility:hidden;-webkit-tap-highlight-color:transparent;-webkit-touch-callout:none}
+.owl-carousel.owl-rtl .owl-item{float:left}
+.owl-carousel .owl-video-play-icon{left:initial;right:50%;margin-right:-40px;margin-left:0}
+.chosen-container .chosen-drop{right:0;left:initial;float:right;text-align:right}
+.chosen-container .search-choice .group-name,.chosen-container .chosen-single .group-name{margin-left:4px;margin-right:0}
+.chosen-container .search-choice .group-name:after,.chosen-container .chosen-single .group-name:after{content:":";padding-right:2px;padding-left:0}
+.chosen-container-single .chosen-single{padding:0 8px 0 0;background:-webkit-gradient(linear,right top,right bottom,color-stop(20%,#fff),color-stop(50%,#f6f6f6),color-stop(52%,#eee),to(#f4f4f4))}
+.chosen-container-single .chosen-single span{margin-left:26px;margin-right:0}
+.chosen-container-single .chosen-single-with-deselect span{margin-left:38px;margin-right:0}
+.chosen-container-single .chosen-single abbr{right:initial;left:26px}
+.chosen-container-single .chosen-single div{left:0;right:initial}
+.chosen-container-single .chosen-search input[type="text"]{padding:4px 5px 4px 20px}
+.chosen-container .chosen-results{margin:0 0 4px 4px;padding:0 4px 0 0}
+.chosen-container .chosen-results li.active-result{padding-right:50px !important;padding-left:0 !important}
+.chosen-container .chosen-results li.highlighted{background-image:-webkit-gradient(linear,right top,right bottom,color-stop(20%,#3875d7),color-stop(90%,#2a62bc))}
+.chosen-container .chosen-results li.group-option{padding-left:0;padding-right:15px}
+.chosen-container-multi .chosen-choices li{float:right}
+.chosen-container-multi .chosen-choices li.search-choice{margin:3px 0 3px 5px;padding:3px 5px 3px 20px}
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close{position:absolute;top:4px;left:3px;right:initial}
+.chosen-container-multi .chosen-choices li.search-choice-disabled{background-image:-webkit-gradient(linear,right top,right bottom,color-stop(20%,#f4f4f4),color-stop(50%,#f0f0f0),color-stop(52%,#e8e8e8),to(#eee))}
+.chosen-container-active.chosen-with-drop .chosen-single{background-image:-webkit-gradient(linear,right top,right bottom,color-stop(20%,#eee),color-stop(80%,#fff))}
+.chosen-container-active.chosen-with-drop .chosen-single div{border-right:0}
+.chosen-rtl{text-align:left}
+.chosen-rtl .chosen-single{padding:0 0 0 8px}
+.chosen-rtl .chosen-single span{margin-right:26px;margin-left:0}
+.chosen-rtl .chosen-single-with-deselect span{margin-right:38px;margin-left:0}
+.chosen-rtl .chosen-single div{left:auto;right:3px}
+.chosen-rtl .chosen-single abbr{left:auto;right:26px}
+.chosen-rtl .chosen-choices li{float:left}
+.chosen-rtl .chosen-choices li.search-field input[type="text"]{direction:ltr}
+.chosen-rtl .chosen-choices li.search-choice{margin:3px 0 3px 5px;padding:3px 19px 3px 5px}
+.chosen-rtl .chosen-choices li.search-choice .search-choice-close{left:auto;right:4px}
+.chosen-rtl.chosen-container-single .chosen-results{margin:0 4px 4px 0;padding:0 0 0 4px}
+.chosen-rtl .chosen-results li.group-option{padding-left:15px;padding-right:0}
+.chosen-rtl.chosen-container-active.chosen-with-drop .chosen-single div{border-left:0}
+.chosen-rtl .chosen-search input[type="text"]{padding:4px 20px 4px 5px;direction:ltr}
+.findkeySkills .search-field .chosen-search-input{font-family:"Cairo-Regular" !important}
+.findkeySkills .search-field .chosen-search-input::-webkit-input-placeholder{font-family:"Cairo-Regular" !important}
+.findkeySkills .search-field .chosen-search-input:-ms-input-placeholder{font-family:"Cairo-Regular" !important}
+.findkeySkills .search-field .chosen-search-input::-ms-input-placeholder{font-family:"Cairo-Regular" !important}
+.findkeySkills .search-field .chosen-search-input::placeholder{font-family:"Cairo-Regular" !important}
+.slider .swiper-slide{background-position:top right}
+.slider .swiper-slide .slide-text h1{font-family:"Cairo-Bold"}
+.slider .swiper-slide .slide-text h1 small{font-family:"Cairo-Light"}
+.slider .search input{padding-right:33px;padding-left:0;font-family:"Cairo-Regular"}
+.category-thumb{font-family:"Cairo-Regular"}
+.gig-services h2{font-family:"Cairo-Bold"}
+.app .mobile h1{font-family:"Cairo-Bold"}
+.explore h1{font-family:"Cairo-Bold"}
+.explore .btn{padding:1.5625rem 9.375rem}
+@media(max-width:767px){.explore .btn{padding:1.5rem}
+}.custom-checkbox,.custom-radio{padding-right:0;padding-left:3rem}
+.custom-checkbox>a,.custom-radio>a{font-family:"Cairo-Regular";font-style:italic;text-align:right}
+.service-single small,.request small{font-family:"Cairo-Light"}
+.requirment{padding:1.25rem 1.875rem 1.875rem 1.875rem}
+.service-thumb{padding:0 0 1.1875rem .8125rem}
+.service-thumb small{font-family:"Cairo-Light"}
+.service-thumb.proposed{min-height:300px;padding:15px 18px}
+.service-thumb.proposed .service-title ~ small{font-family:"Cairo-Regular"}
+.service-header{padding:0 1.875rem 1.875rem !important}
+.service-title{font-family:"Cairo-Bold"}
+.service-footer a{font-family:"Cairo-Regular";color:#296590 !important}
+.service-footer a i{margin-left:2px;margin-right:0}
+.service-single .service-footer a{margin-right:3.75rem;margin-left:0}
+@media(min-width:768px) and (max-width:991px){.service-single .service-footer a{margin-right:15px;margin-left:0}
+}@media(max-width:767px){.service-single .service-footer a{margin-right:10px;margin-left:0}
+}.user img{margin-left:3px;margin-right:0}
+.user p{font-family:"Cairo-Bold"}
+.user .badge{font-family:"Cairo-Regular"}
+.badge{font-family:"Cairo-Regular" !important}
+.price p{font-family:"Cairo-Bold"}
+.paging a{margin-right:1.5rem;margin-left:0}
+.paging a .fas{-webkit-transform:rotate(-180deg);transform:rotate(-180deg)}
+.paging p{font-family:"Cairo-Regular"}
+.reviews .user h3{font-family:"Cairo-Regular"}
+.reviews p{font-family:"Cairo-Regular"}
+.header .review-head{font-family:"Cairo-Bold"}
+.simplebar-track{left:0;right:initial}
+.simplebar-scrollbar{left:2px;right:initial}
+.simplebar-track.horizontal{right:0;left:initial}
+.horizontal.simplebar-track .simplebar-scrollbar{right:initial;left:auto}
+.side .btn{font-family:"Cairo-Bold" !important}
+.side h2{font-family:"Cairo-Bold"}
+.side div.d-flex p{font-family:"Cairo-Regular"}
+.side>a:not(.btn){font-family:"Cairo-Regular";font-style:italic;text-align:left}
+.confirmation i{margin-left:1.75rem;margin-right:0}
+.confirmation div>div p{font-family:"Cairo-Bold"}
+.confirmation div>div p+p{margin-right:2.8125rem !important;margin-left:0 !important}
+.confirmation+a{text-align:left;font-family:"Cairo-Regular"}
+.confirmation+a i{margin-right:5px;margin-left:0}
+.faq-accordion .item .item-trigger{margin:-1.5625rem 0 0 -1.5625rem;padding:1.5625rem 0 22px 1.5625rem;font-family:"Cairo-Regular"}
+#registerFindagigModal .help-block,#registerPostagigModal .help-block{font-family:"Cairo-Regular";right:0 !important;left:initial !important}
+#registerFindagigModal .help-block::before,#registerPostagigModal .help-block::before{margin-right:0;margin-left:5px}
+.help-block{font-family:"Cairo-Regular";right:0 !important;left:initial !important;float:right}
+.dashboard header .btn-default+.btn{margin-right:0}
+.dashboard .nav .nav-link{font-family:"Cairo-Regular"}
+.dashboard .item .item-trigger div[class*="item-info"] span{font-family:"Cairo-Bold"}
+.dashboard .item .item-trigger div[class*="item-info"] p{font-family:"Cairo-Regular"}
+.dashboard .item .item-trigger .item-info h2{font-family:"Cairo-Bold"}
+.dashboard .item .item-trigger .item-info a{font-family:"Cairo-Regular";font-style:italic;margin-right:0;margin-left:1.375rem;color:#296590 !important}
+.dashboard .item .item-trigger .item-info i{margin-left:0;margin-right:2rem}
+.dashboard .item .item-trigger .item-info h3{font-family:"Cairo-Bold"}
+.dashboard .item .item-trigger .item-info-collapsed h2{font-family:"Cairo-Bold"}
+.dashboard .item .item-trigger .item-info-collapsed .badge{font-family:"Cairo-Regular" !important}
+.dashboard .item .item-content .service-thumb .user+p{font-family:"Cairo-Regular"}
+.dashboard .item .item-content .item-status .d-flex label:not(.text-hide),.dashboard .item .item-content .item-status .d-flex p{font-family:"Cairo-Regular"}
+.dashboard .item .item-content .item-status .d-flex a{font-family:"Cairo-Regular";font-style:italic}
+.dashboard .item .item-content .item-review h4{font-family:"Cairo-Regular"}
+.dashboard .item .item-content .item-review .form-control{padding-right:0}
+.dashboard .item .item-content .item-review .char{font-family:"Cairo-Regular";text-align:left}
+.dashboard .side .total_num{font-family:"Cairo-Bold"}
+.dashboard .side .user p:nth-of-type(1){font-family:"Cairo-Bold"}
+.dashboard .side .user p:nth-of-type(2){font-family:"Cairo-Regular"}
+.dashboard .side .user p:nth-of-type(3){font-family:"Cairo-Regular"}
+.dashboard .side .user a{font-family:"Cairo-Bold"}
+.dashboard .side .user+.d-flex label,.dashboard .side .user+.d-flex a{font-family:"Cairo-Regular"}
+.dashboard .side .user ~ .justify-content-around p{font-family:"Cairo-Regular"}
+.dashboard .side .user ~ .justify-content-around p span{font-family:"Cairo-Bold"}
+.dashboard .side .user ~ .justify-content-around ~ .justify-content-center.social_container a+a{margin-right:1.125rem;margin-left:0}
+.dashboard .side .user ~ .justify-content-around ~ .justify-content-center.actions_container a+a{margin-right:1.125rem;margin-left:0}
+.dashboard .side .user ~ .justify-content-around ~ .justify-content-around a i{margin-left:5px;margin-right:0}
+.dashboard .side .custom-file-control{font-family:"Cairo-Regular"}
+.dashboard .side .custom-file .custom-file-control:before{font-family:"Cairo-Regular";font-style:italic}
+.dashboard .side .custom-file .custom-file-control:after{left:initial}
+.dashboard .side .btn{font-family:"Cairo-Bold" !important}
+.dashboard .side .btn-default{border-color:#296590;color:#296590;font-family:"Cairo-Bold" !important}
+.dashboard .side .btn-default+.btn{margin-left:0;margin-right:10px}
+.dashboard .side .btn-default.btn-block+.btn-block{margin-right:0}
+.dashboard .side .badge{margin-right:0;margin-left:5px;font-family:"Cairo-Regular"}
+.dashboard .side h3{font-family:"Cairo-Bold" !important}
+.dashboard .side #myMessages .item-info .user p,.dashboard .side #myMessages .item-info-collapsed .user p{font-family:"Cairo-Bold"}
+.dashboard .side #myMessages .item-info i,.dashboard .side #myMessages .item-info-collapsed i{margin-left:initial !important;margin-right:2rem !important}
+.dashboard .side .message{padding-right:35px;padding-left:12px}
+.dashboard .side .message .message-detail .user img{margin-left:3px;margin-right:0}
+.dashboard .side .message .message-detail .user p{font-family:"Cairo-Bold"}
+.dashboard .side .message .message-detail .user+p{font-family:"Cairo-Regular"}
+.dashboard .side .supplier-info h2,.dashboard .side .supplier-info p{font-family:"Cairo-Bold" !important}
+.dashboard .side .supplier-gig .header h2{font-family:"Cairo-Bold"}
+.dashboard .side .supplier-gig .item-content{border:0 !important}
+.dashboard .side .supplier-gig .item-content .item-status .d-flex label{font-family:"Cairo-Regular"}
+.dashboard .side .supplier-gig .title h3{font-family:"Cairo-Bold"}
+.dashboard .side .supplier-gig .title p{font-family:"Cairo-Bold" !important}
+.dashboard .side .supplier-gig>p{font-family:"Cairo-Light"}
+.scroll-bottom{font-family:"Cairo-Regular"}
+.supplier-info h2{font-family:"Cairo-Bold" !important}
+.supplier-info p{font-family:"Cairo-Regular" !important}
+.beta-label{top:0;left:initial;right:0}
+@media(min-width:768px){.beta-label{top:-2px}
+}@media(max-width:1199px){.beta-label{top:-8px}
+}.message-modal .modal-content .custom-file-control::before,.edit-picture .modal-content .custom-file-control::before,.add-service .modal-content .custom-file-control::before,.apply-proposed .modal-content .custom-file-control::before{font-family:"Cairo-Regular";font-style:italic;margin-left:20px}
+.message-modal .char,.edit-picture .char,.add-service .char,.apply-proposed .char{font-family:"Cairo-Regular";text-align:right}
+.apply-proposed .modal-header .modal-title small{font-family:"Cairo-Regular"}
+.apply-proposed .modal-body label{font-family:"Cairo-Bold"}
+.apply-proposed .modal-body p{font-family:"Cairo-Regular"}
+.apply-proposed .user{padding-right:initial;padding-left:15px}
+.apply-proposed .item-status{padding-right:initial;padding-left:15px}
+.apply-proposed .item-requirment a{font-family:"Cairo-Regular";font-style:italic}
+.apply-proposed .item-review{padding-left:initial;padding-right:15px}
+.apply-proposed .br-theme-fontawesome-stars .br-widget{padding-right:initial;padding-left:10px}
+.edit-profile section.container .user+a{font-family:"Cairo-Regular";text-align:right}
+.edit-profile section.container .btn+.btn{margin-left:initial;margin-right:22px}
+.supplier-gig .title p{font-family:"Cairo-Bold" !important}
+.sendmessage small,.sendmessage i{color:#296590 !important}
+.add-service .modal-content .form-group label:not(.text-hide){font-family:"Cairo-Regular" !important}
+.add-service .form-group>small{text-align:left;font-family:"Cairo-Regular";font-style:italic}
+.add-service .form-group>small a{color:#296590 !important}
+.add-service input.form-control ~ .ui-selectmenu-button.form-control{margin-left:initial;margin-right:-20px}
+.add-service .btn+.btn{margin-left:initial;margin-right:22px}
+.add-service #assignToSupplier .icon-search{position:absolute;right:initial;left:0}
+.dashboard .item .item-trigger div[class*="item-info"] span>p{font-family:"Cairo-Regular"}
+.d-flex .btn+.btn{margin-left:initial;margin-right:15px}
+.dashboard .nav .notification .nav-link:after{left:12px;right:initial}
+.how-it-works h2{font-family:"Cairo-Bold"}
+.how-it-works p,.how-it-works ul li{color:#333 !important;font-size:1.3rem !important}
+.how-it-works ul{max-width:80%;margin:0 auto}
+#assignToSupplier .icon-search{right:initial;left:0}
+#admin_categoriesList .item .item-trigger .item-info-collapsed .btn,#admin_categoriesList .item .item-trigger .item-info .btn{font-family:"Cairo-Regular"}
+@media(max-width:767px){#admin_categoriesList .item .item-trigger .item-info-collapsed .btn,#admin_categoriesList .item .item-trigger .item-info .btn{margin-left:initial;margin-right:10px}
+}#admin_categoriesList .item .item-trigger div[class*="item-info"] i{margin-left:initial;margin-right:10px}
+@media(max-width:767px){#admin_categoriesList .item-content .btn{margin-left:initial;margin-right:10px}
+}#admin_categoriesList .item-content .d-flex span{font-family:"Cairo-Bold"}
+#categoriesResult a{font-family:"Cairo-Bold"}
+.page-header.alt .not-found>p{font-family:"Cairo-Bold"}
+.page-header.alt .not-found span{font-family:"Cairo-Bold"}
+.search-result .lead{float:left}
+.search-result ul li.cat_title{font-family:"Cairo-Regular"}
+.search-result ul li:not(.cat_title) a img{margin-right:initial;margin-left:10px}
+#assignToSupplier .lead{right:initial;left:0}
+#assignToSupplier .search-result{left:initial;right:0}
+#assignToSupplier .search-result .searchusers li button{font-family:"Cairo-Bold";text-align:left}
+.ui-menu.ui-autocomplete .ui-autocomplete-category{font-family:"Cairo-Regular"}
+.ui-menu.ui-autocomplete .ui-menu-item .ui-menu-item-wrapper{font-family:"Cairo-Bold"}
+.input-group .form-control:not(:last-child){border-top-right-radius:2.625rem;border-top-left-radius:2.625rem;border-bottom-right-radius:2.625rem;border-bottom-left-radius:2.625rem}
+#how-it-works .row .how__it__works-play a h3{font-size:24px}
+#how-it-works .row .how__it__works-play a h3 i{margin-left:8px}
+#how-it-works .row .how__it__works-play .modal-header{padding:0;position:relative}
+#how-it-works .row .how__it__works-button a{text-decoration:none}
+.service-thumb{padding:20px 16px 50px 20px}
+.service-thumb-head a{display:inline-block}
+.service-thumb-head a h3{padding-left:90px;padding-right:0;float:right}
+.service-thumb-head a span{right:initial;left:0;font-size:18px;font-family:"Cairo-Light"}
+.service-thumb-head a p{clear:left;font-family:"Cairo-Regular"}
+.service-thumb-footer a{bottom:-40px;right:initial;left:0}
+.service-thumb .service-footer a{color:#296590 !important}
+#single-gig #gigContent .row .service-thumb--header h1{font-family:"Cairo-Bold";text-align:right}
+#single-gig #gigContent .row .service-thumb--header p{font-family:"Cairo-Regular";text-align:right}
+#single-gig #gigContent .row .service-thumb--header span{right:initial;left:10px}
+#single-gig #gigContent .row .service-thumb--body .user .user_name p{text-align:right}
+#single-gig #gigContent .row .service-thumb--body .description{font-family:"Cairo-Regular"}
+#single-gig #gigContent .row .service-thumb--body .description p{text-align:right}
+#single-gig #gigContent .row .service-thumb--body .item a{font-family:"Cairo-Regular";color:#296590}
+#single-gig #gigContent .row .service-thumb--body .item-status .item label{font-family:"Cairo-Regular"}
+#single-gig #gigContent .row .service-thumb--body .item-status .item p{font-family:"Cairo-Regular";right:initial;left:0}
+#single-gig #gigContent .row .service-thumb--body .item-status .skills label{margin-right:initial;margin-left:10px}
+#service-order-confirm #confirmation-msg h1{font-family:"Cairo-Bold"}
+#service-order-confirm #confirmation-msg p{font-family:"Cairo-Light"}
+#service-order-confirm #confirmation-msg p b{font-family:"Cairo-Bold"}
+#service-order-confirm #confirmation-msg a{font-family:"Cairo-Regular"}
+#FAQ-section .item-content p{font-family:"Cairo-Regular"}
+#FAQ-section .item-content a{font-family:"Cairo-Regular"}
+#FAQ-section .item-trigger .item-info h2{font-family:"Cairo-Bold";text-align:right}
+#FAQ-section .item-trigger .item-info-collapsed h2{font-family:"Cairo-Bold";text-align:right}
+#FAQ-section .items-title{font-family:"Cairo-Bold"}
+.edit-profile{font-family:"Cairo-Regular"}
+.edit-profile-form input::-webkit-input-placeholder,.edit-profile-form textarea::-webkit-input-placeholder,.edit-profile-form select::-webkit-input-placeholder{text-align:right}
+.edit-profile-form input:-ms-input-placeholder,.edit-profile-form textarea:-ms-input-placeholder,.edit-profile-form select:-ms-input-placeholder{text-align:right}
+.edit-profile-form input::-ms-input-placeholder,.edit-profile-form textarea::-ms-input-placeholder,.edit-profile-form select::-ms-input-placeholder{text-align:right}
+.edit-profile-form input::placeholder,.edit-profile-form textarea::placeholder,.edit-profile-form select::placeholder{text-align:right}
+.edit-profile-form input::-moz-placeholder,.edit-profile-form textarea::-moz-placeholder,.edit-profile-form select::-moz-placeholder{text-align:right}
+#admin-gigs #gigsList .item-content .bold-label{text-align:right}
+#admin-gigs #gigsList .item-content .button-group a:first-child{margin-right:50px;margin-left:initial}
+@media(max-width:991px){#adminDBUsers .usersButtons .btn{margin-left:initial;margin-right:20px}
+}.msgbox .item-trigger .fa-trash{left:10px;right:initial}
+.msgbox .item-trigger .message-head-info{font-family:"Cairo-Regular" !important;text-align:right}
+@media(max-width:767px){.nav-pills .ml-5{margin-right:0 !important;margin-left:initial !important}
+}.cat-link h3,.sub-cat-link h3{font-family:"Cairo-Regular";margin-left:initial;margin-right:5px}
+.alt .container .row .col-md-3{padding-right:initial;padding-left:0}
+.editImages .deleteimg{right:initial;left:0}
+.has-float-label label,.has-float-label>span{top:-1em;left:initial;right:0;font-family:"Cairo-Regular"}
+.has-float-label>p{right:initial;left:0}
+.has-float-label label::after,.has-float-label>span::after{left:-0.2em;right:-0.2em}
+.input-group .has-float-label:not(:last-child),.input-group .has-float-label:not(:last-child) .form-control{border-bottom-right-radius:initial;border-bottom-left-radius:0;border-top-right-radius:initila;border-top-left-radius:0;border-right:initial;border-left:0}
+.input-group .has-float-label:not(:first-child),.input-group .has-float-label:not(:first-child) .form-control{border-bottom-left-radius:initial;border-bottom-right-radius:0;border-top-left-radius:initial;border-top-right-radius:0}
+.bg-primary,.btn-primary{background-color:#296590 !important;border-color:#296590 !important}
+.bg-primary:hover,.btn-primary:hover{background-color:#1e4968;border-color:#1e4968}
+.btn-outline-primary{color:#296590;background-color:transparent;background-image:none;border-color:#296590}
+.btn-outline-primary:hover{color:white;background-color:#296590;border-color:#296590}
+.text-primary{color:#296590 !important}
+.text-primary:hover{color:#23577c}
+.btn{border-radius:2.625rem}
+.playpause{text-align:left}
+html[dir="rtl"] .custom-file-control:before{content:'إضافة صورة' !important;font-family:"Cairo-Regular" !important}
+html[dir="rtl"] .custom-file-control:after{content:'إختيار ملف' !important;font-family:"Cairo-Regular" !important}
+select.form-control:not([size]):not([multiple]){height:35px !important}
+.has-float-label a,.form-group a{font-family:"Cairo-Regular"}
+.flex-row{overflow:hidden !important}
+#gigs .flex-row{overflow-x:auto !important}
+.applied-supplier-cont a{color:#296590 !important;font-family:"Cairo-Regular"}
+.beta-notification{font-family:'Cairo-Regular';text-align:right}
+.category-thumb:hover{-webkit-box-shadow:0 0 30px #747474;box-shadow:0 0 30px #747474;-webkit-transition:all .25s ease-in-out;transition:all .25s ease-in-out}
+.inner header{min-height:92px}
+.inner header .search{max-width:445px !important;left:7rem}
+.search-inner-btn{right:initial;left:15px;border-top-right-radius:0;border-bottom-right-radius:0;border:1px solid #fff !important;top:0;text-align:center;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:'Cairo-Regular' !important;background-color:#083e52 !important;color:#fff !important;z-index:4}
+@media(max-width:767px){.search-inner-btn{min-width:55px !important;padding:0 !important}
+.search-inner-btn span{font-size:1rem !important}
+}.bg-gray{background-color:#848484 !important}
+.bg-gray i[class^="icon-angle"]{color:#848484 !important}
+.item-status .badge{white-space:pre-line}
+header .logo{margin-right:40px;margin-left:0 !important}
+.rounded{border-radius:1.5rem !important}
+.refund_nav h3{font-family:'Cairo-Bold',sans-serif}
+.refund_item_info h2{font-family:'Cairo-Bold',sans-serif}
+.refund_item_info p{font-family:'Cairo-Regular',sans-serif}
+.refund_item_content .alert p{font-family:'Cairo-Regular',sans-serif}
+.refund_item_content_single span{font-family:'Cairo-Regular',sans-serif}
+.refund_item_content_done h5{font-family:'Cairo-Bold',sans-serif}
+.refund_item_content_done p{font-family:'Cairo-Regular',sans-serif}
+.refund_item_content_title{font-family:'Cairo-regular',sans-serif}
+.lato-regular{font-family:'Cairo-regular',sans-serif}
+.lato-bold{font-family:'Cairo-Bold',sans-serif !important}
+input[type="radio"]:checked+label,input[type="radio"]:not(:checked)+label{font-family:'Cairo-Regular',sans-serif !important}
+.btn-collapse{font-family:'Cairo-Regular',sans-serif !important}
+.filter .form-control{padding-right:0;padding-left:25px}
+.filter-search-input-icon{right:initial;left:5px}
+.categories-toggle .btn:last-of-type{border-left:1px solid #296590 !important;border-right:0 !important;border-top-left-radius:2rem;border-bottom-left-radius:2rem}
+.categories-toggle .btn:first-of-type{border-top-right-radius:2rem;border-bottom-right-radius:2rem}
+.btn-outline-primary:not(:disabled):not(.disabled):active{color:#fff;background-color:#296590;border-color:#296590}
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus{-webkit-box-shadow:none !important;box-shadow:none !important}
+#categories-toggle .nav-item{font-family:"Cairo-Bold";color:#296590}
+#categories-toggle .nav-item:first-of-type{border-top-right-radius:30px;border-top-left-radius:0;border-bottom-left-radius:0;border-bottom-right-radius:30px;border-left:0}
+#categories-toggle .nav-item:last-of-type{border-top-left-radius:30px;border-bottom-left-radius:30px;border-top-right-radius:0;border-bottom-right-radius:0}
+.searchMessages-single h4,.searchMessages-single h5{font-family:"Cairo-Bold"}
+.searchMessages-single p{font-family:"Cairo-Light";text-align:right}
+.singleMessage-header .btn.btn-primary .fas.fa-angle-left{-webkit-transform:rotate(180deg);transform:rotate(180deg);margin-left:8px;margin-right:0}
+.singleMessage-content-single h4,.singleMessage-content-single h5{font-family:"Cairo-Bold"}
+.singleMessage-content-single p{font-family:"Cairo-Light";text-align:right}
+.singleMessage-content-files a{font-family:"Cairo-Regular";text-align:right}
+.singleMessage-content-files a:not(:last-of-type){margin-left:10px;margin-right:0}
+.text-body{color:black !important;font-family:"Cairo-Regular"}
+footer .footer-top div[class*='col-'] a{font-family:"Cairo-Regular";text-align:right}

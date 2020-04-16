@@ -1,0 +1,112 @@
+// sub-component tabs module
+
+.nav-pills{
+	.active{
+		background-color: #296590;
+		h3,i, &:focus {
+			color: #fff !important;
+		}
+		span.icon-angle-right {
+			color: #fff;
+		}
+	}
+	@include media-breakpoint-down(sm){
+		margin-bottom: 20px;
+		.ml-5{
+			margin-left: 0px !important;
+		}
+	}
+}
+
+.cat-link, .sub-cat-link {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	padding: 2rem 0.625rem;
+	text-decoration: none;
+	border-bottom: 1px solid #c7c7cc;
+	&:last-child{
+		margin-bottom: 2.5rem;
+	}
+	
+	h3 {
+		color: #000;
+		font-size: 1.5625rem;
+		font-family: $nav-font;
+		margin-left: 5px;
+		margin-bottom: 0;
+	}
+	i {
+		font-size: 3.5rem;
+	}
+	span.icon-angle-right {
+		color: #c7c7cc;
+		font-size: 22px;
+	}
+	&:hover {
+		text-decoration: none;
+		background-color: #296590;
+		h3,
+		i {
+			color: #fff;
+		}
+		span.icon-angle-right {
+			color: #fff;
+		}
+	}
+}
+.cat-link {
+	margin-bottom: 0px !important;
+	padding: 2rem 0.625rem !important;
+}
+.alt{
+	.container{
+		.row{
+			.col-md-3{
+				padding-right: 0px;
+			}
+
+		}
+	}
+}
+
+.flex-row{
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+			justify-content: space-between;
+	-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	overflow-x: auto;
+}
+@include media-breakpoint-down(sm){
+	.tab-pane{
+		.lead{
+			text-align: center;
+		}
+	}
+	.cat-link, .sub-cat-link{
+		i {
+			font-size: 2.5rem;
+		}
+
+		h3 {
+			font-size: 1.02rem;
+			margin-right: auto;
+		}
+
+		&:last-child {
+			margin-bottom: 0rem;
+		}
+
+		border: 0px;
+		text-align: center;
+	}
+	.sub-cat-link{
+		h3{
+			font-size: 1.2rem;
+		}
+	}
+}

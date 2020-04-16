@@ -1,0 +1,157 @@
+#single-gig {
+	#gigContent{
+		.row{
+			.service-thumb {
+				height: initial !important;
+				&--header {
+					border-bottom: 1px solid #c7c7cc;
+					position: relative;
+					h1 {
+						font-weight: 600;
+						font-size: 25px;
+						font-family: 'Lato-Bold';
+						color: #000;
+						text-transform: capitalize;
+						text-align: left;
+						line-height: 20px;
+					}
+					p {
+						font-size: 15px;
+						color: black;
+						font-family: 'Lato-Regular';
+						text-align: left;
+						line-height: 18px;
+					}
+					span {
+						position: absolute;
+						top: 0px;
+						right: 10px;
+						color: #D0D0D0;
+						font-size: 24px;
+						font-weight: bold;
+						cursor: pointer;
+					}
+				}
+				&--body{
+					margin-top: 20px;
+					.user{
+						img{
+							height: 51px;
+							width: 51px;
+						}
+						.user_name{
+							p{
+								font-size: 16px;
+								color: black;
+								line-height: 19px;
+								text-align: left;
+								text-transform: capitalize;
+							}
+						}
+						.br-theme-fontawesome-stars{
+							.br-widget{
+								a:after{
+									font-size: 15px;
+								}
+							}
+						}
+					}
+
+
+					label, .sec-title{
+						text-transform: capitalize;
+					}
+					.sec-title{
+						color: black;
+						font-weight: 600;
+						font-size: 15px;
+					}
+					.item-review{
+						textarea{
+							border: 0px;
+							border-bottom: 1px solid #c7c7c7;
+							border-radius: 0px;
+							min-height: 80px;
+							height: 80px;
+						}
+						.custom-controls-stacked{
+							.custom-control {
+								margin-bottom: 0px !important;
+								margin-top: 10px !important; 
+							}
+						}
+					}
+					.description{
+						font-size: 14px;
+						font-family: 'Lato-Regular';
+						min-height: 220px;
+						p{
+							color: #747474;
+							font-size: 13px;
+							text-align: left;
+						}
+					}
+					.item{
+						.sec-title{
+							font-size: 13px;
+							margin: 0px;
+						}
+						a{
+							font-size: 12px;
+							font-family: 'Lato-Regular';
+							color: #296590;
+							line-height: 16px;
+						}
+					}
+					.item-status{
+						.item{
+							position: relative;
+							border-bottom: 0.5px solid #c7c7c7;
+							padding-bottom: 10px;
+							min-height: 44px;
+							label{
+								margin-bottom: 0px;
+								font-family: 'Lato-Regular';
+								color: #000;
+								font-size: 13px;
+								text-transform: capitalize;
+							}
+							.price{
+								font-size: 13px;
+								font-weight: bold;
+							}
+							p{
+								font-family: 'Lato-Regular';
+								font-size: 13px;
+								margin: 0px !important;
+								position: absolute;
+								right: 0px;
+								bottom: 10px;
+								color: #666;
+							}
+						}
+						.skills{
+							margin-top: 10px;
+							label{
+								margin-right: 10px;
+							}
+							.badge{
+								min-width: 88px;
+								min-width: 19px;
+								width: 88px;
+								padding: 5px 0px;
+								white-space: pre-wrap;
+								background-color: #296590;
+								text-align: center;
+								margin: 3px;
+								font-size: 10px;
+								color: white;
+								border-radius: 5px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

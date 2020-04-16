@@ -1,0 +1,1 @@
+function reloadAsGet() {var loc = window.location; window.location = loc.protocol + '//' + loc.host + loc.pathname + loc.search; }

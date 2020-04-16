@@ -1,0 +1,17 @@
+<div dir="rtl" style="direction: rtl;">
+	مرحبًا {{$order->supplier->username}},<br>
+<br>
+	يؤسفنا أن نعلم بحدوث نزاع بشأن أمر العمل رقم #{{$order->id}} - {{$title}}. <br>
+	لقد راجعنا بدقة جميع مراسلاتك، ويؤسفنا إبلاغك بأنّنا قد قرّرنا "إلغاء" أمر العمل، وسيتمّ ردّ الأموال إلى جهة التوظيف. <br>
+<br>
+	<b>تفاصيل أمر العمل:</b><br>
+	اسم جهة التوظيف: <a href="{{route('customer_profile',$order->customer->username)}}">{{$order->customer->username}}</a><br>
+	اسم مقدّم الخدمة: <a href="{{route('supplier_profile',$order->supplier->username)}}">{{$order->supplier->username}}</a><br>
+	الخدمة/الوظيفة: {{$title}}<br>
+	رقم تعريف أمر العمل: <a href="{{route('supplier_gigs')}}">#{{$order->id}} - {{$title}}</a><br>
+	المبلغ الذي سيتمّ ردّه: {{$price}} جنيه مصري <br>
+<br>
+	حظًا أفضل في وظيفتك المقبلة! <br>
+<br>
+	مع تحيات فريق فلكسي غيغز!
+</div>
